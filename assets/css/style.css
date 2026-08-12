@@ -1,0 +1,40 @@
+/* =========================================================
+   VARIABLES GLOBALES
+   ========================================================= */
+
+:root {
+
+    /* Color principal de Fluxa */
+    --fluxa-primary: #6c5ce7;
+
+    /* Color de fondo principal */
+    --fluxa-background: #f8f9fc;
+
+    /* Color de las tarjetas */
+    --fluxa-surface: #ffffff;
+
+    /* Color principal del texto */
+    --fluxa-text: #212529;
+
+    /* Color secundario del texto */
+    --fluxa-text-muted: #6c757d;
+
+    /* Color de los bordes */
+    --fluxa-border: #e9ecef;
+
+}
+
+/* =========================================================
+   ESTILOS GENERALES
+   ========================================================= */
+
+body {
+
+    /* Fondo general de la aplicación */
+    background-color: var(--fluxa-background);
+
+    /* Color principal del texto */
+    color: var(--fluxa-text);
+
+}
+
