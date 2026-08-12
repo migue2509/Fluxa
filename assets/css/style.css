@@ -734,3 +734,425 @@ body {
     }
 
 }
+
+/* =========================================================
+   MODAL - CREAR TAREA
+   ========================================================= */
+
+.fluxa-task-modal {
+
+    /* Color principal del modal */
+    background-color: var(--fluxa-surface);
+
+    /* Bordes redondeados */
+    border: none;
+
+    border-radius: 20px;
+
+    /* Eliminamos el borde predeterminado */
+    overflow: hidden;
+
+}
+
+
+/* =========================================================
+   HEADER DEL MODAL
+   ========================================================= */
+
+.fluxa-task-modal-header {
+
+    /* Eliminamos el borde inferior de Bootstrap */
+    border-bottom: none;
+
+    /* Espaciado */
+    padding: 2rem 2.5rem 1rem;
+
+}
+
+
+/* Título */
+
+.fluxa-task-modal-header .modal-title {
+
+    /* Tamaño */
+    font-size: 2rem;
+
+    /* Peso */
+    font-weight: 700;
+
+    /* Color UI Kit */
+    color: var(--fluxa-text);
+
+}
+
+
+/* =========================================================
+   BOTÓN CERRAR
+   ========================================================= */
+
+.fluxa-modal-close {
+
+    /* Tamaño */
+    width: 40px;
+
+    height: 40px;
+
+    /* Sin borde */
+    border: none;
+
+    /* Sin fondo */
+    background: transparent;
+
+    /* Color */
+    color: var(--fluxa-text);
+
+    /* Centrar icono */
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    /* Tamaño del icono */
+    font-size: 1.35rem;
+
+}
+
+
+/* Hover */
+
+.fluxa-modal-close:hover {
+
+    background-color: var(--fluxa-background);
+
+    color: var(--fluxa-primary);
+
+}
+
+
+/* =========================================================
+   BODY
+   ========================================================= */
+
+.fluxa-task-modal-body {
+
+    padding: 1rem 2.5rem 2.5rem;
+
+}
+
+
+/* =========================================================
+   LABELS
+   ========================================================= */
+
+.fluxa-task-modal .form-label {
+
+    /* Tamaño */
+    font-size: 1rem;
+
+    /* Peso */
+    font-weight: 500;
+
+    /* Color */
+    color: var(--fluxa-text);
+
+    /* Espaciado */
+    margin-bottom: 0.5rem;
+
+}
+
+
+/* =========================================================
+   INPUTS / TEXTAREA / SELECT
+   ========================================================= */
+
+.fluxa-form-control {
+
+    /* Fondo de los campos */
+    background-color: var(--fluxa-input-background);
+
+    /* Sin borde */
+    border: 1px solid transparent;
+
+    /* Bordes */
+    border-radius: 10px;
+
+    /* Altura */
+    min-height: 48px;
+
+    /* Color */
+    color: var(--fluxa-text);
+
+    /* Sombra */
+    box-shadow: none;
+
+}
+
+
+/* Textarea */
+
+.fluxa-textarea {
+
+    min-height: 92px;
+
+    resize: vertical;
+
+}
+
+
+/* Focus */
+
+.fluxa-form-control:focus {
+
+    background-color: var(--fluxa-surface);
+
+    border-color: var(--fluxa-primary);
+
+    box-shadow: 0 0 0 0.2rem var(--fluxa-primary-soft);
+
+}
+
+
+/* Placeholder */
+
+.fluxa-form-control::placeholder {
+
+    color: var(--fluxa-text-muted);
+
+}
+
+
+/* =========================================================
+   SELECT
+   ========================================================= */
+
+.fluxa-task-modal .form-select {
+
+    cursor: pointer;
+
+}
+
+
+/* =========================================================
+   INPUT DE FECHA
+   ========================================================= */
+
+.fluxa-input-icon-wrapper {
+
+    position: relative;
+
+}
+
+
+/* Icono del calendario */
+
+.fluxa-input-icon {
+
+    position: absolute;
+
+    left: 0.9rem;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: var(--fluxa-text-muted);
+
+    pointer-events: none;
+
+}
+
+
+/* Espacio para icono */
+
+.fluxa-input-icon-wrapper input {
+
+    padding-left: 2.6rem;
+
+}
+
+
+/* =========================================================
+   RECORDATORIO
+   ========================================================= */
+
+.fluxa-reminder {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.5rem;
+
+}
+
+
+/* Checkbox */
+
+.fluxa-reminder .form-check-input {
+
+    width: 22px;
+
+    height: 22px;
+
+    margin-top: 0;
+
+    border-color: var(--fluxa-border);
+
+    cursor: pointer;
+
+}
+
+
+/* Checkbox seleccionado */
+
+.fluxa-reminder .form-check-input:checked {
+
+    background-color: var(--fluxa-primary);
+
+    border-color: var(--fluxa-primary);
+
+}
+
+
+/* Label */
+
+.fluxa-reminder .form-check-label {
+
+    font-size: 1rem;
+
+    color: var(--fluxa-text);
+
+    cursor: pointer;
+
+}
+
+
+/* =========================================================
+   BOTÓN DEL RECORDATORIO
+   ========================================================= */
+
+.fluxa-reminder-button {
+
+    width: 42px;
+
+    height: 42px;
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--fluxa-text-muted);
+
+    font-size: 1.4rem;
+
+}
+
+
+.fluxa-reminder-button:hover {
+
+    color: var(--fluxa-primary);
+
+    background-color: var(--fluxa-background);
+
+}
+
+
+/* =========================================================
+   BOTÓN CANCELAR
+   ========================================================= */
+
+.fluxa-cancel-button {
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--fluxa-text);
+
+    font-weight: 500;
+
+    padding: 0.75rem 0;
+
+}
+
+
+.fluxa-cancel-button:hover {
+
+    color: var(--fluxa-primary);
+
+}
+
+
+/* =========================================================
+   BOTÓN PRINCIPAL
+   ========================================================= */
+
+.fluxa-primary-button {
+
+    /* Color principal de Fluxa */
+    background-color: var(--fluxa-primary);
+
+    /* Color del texto */
+    color: #ffffff;
+
+    /* Sin borde */
+    border: none;
+
+    /* Bordes */
+    border-radius: 10px;
+
+    /* Espaciado */
+    padding: 0.75rem 1.25rem;
+
+    /* Peso */
+    font-weight: 500;
+
+    /* Separación entre texto e icono */
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 0.5rem;
+
+}
+
+
+/* Hover */
+
+.fluxa-primary-button:hover {
+
+    background-color: var(--fluxa-primary-dark);
+
+    color: #ffffff;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+
+    .fluxa-task-modal-header {
+
+        padding: 1.5rem 1.25rem 1rem;
+
+    }
+
+
+    .fluxa-task-modal-body {
+
+        padding: 1rem 1.25rem 1.5rem;
+
+    }
+
+
+    .fluxa-task-modal-header .modal-title {
+
+        font-size: 1.6rem;
+
+    }
+
+}

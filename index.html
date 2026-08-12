@@ -887,4 +887,351 @@
 
 </body>
 
+<!-- =========================================================
+     MODAL - CREAR NUEVA TAREA
+     ========================================================= -->
+<div
+    class="modal fade"
+    id="createTaskModal"
+    tabindex="-1"
+    aria-labelledby="createTaskModalLabel"
+    aria-hidden="true"
+>
+
+    <!-- =====================================================
+         CONTENEDOR DEL MODAL
+         ===================================================== -->
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+
+        <!-- =================================================
+             CONTENIDO DEL MODAL
+             ================================================= -->
+        <div class="modal-content fluxa-task-modal">
+
+
+            <!-- =================================================
+                 HEADER
+                 ================================================= -->
+            <div class="modal-header fluxa-task-modal-header">
+
+                <!-- Título -->
+                <h2
+                    class="modal-title"
+                    id="createTaskModalLabel"
+                >
+                    Crear nueva tarea
+                </h2>
+
+
+                <!-- Botón cerrar -->
+                <button
+                    type="button"
+                    class="btn fluxa-modal-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Cerrar"
+                >
+
+                    <i class="bi bi-arrow-left"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- =================================================
+                 BODY
+                 ================================================= -->
+            <div class="modal-body fluxa-task-modal-body">
+
+                <!-- Formulario -->
+                <form id="createTaskForm">
+
+
+                    <!-- =========================================
+                         TÍTULO DE LA TAREA
+                         ========================================= -->
+                    <div class="mb-4">
+
+                        <label
+                            for="taskTitle"
+                            class="form-label"
+                        >
+                            ¿Qué necesitas hacer?
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control fluxa-form-control"
+                            id="taskTitle"
+                            name="taskTitle"
+                            placeholder=""
+                        >
+
+                    </div>
+
+
+                    <!-- =========================================
+                         DESCRIPCIÓN
+                         ========================================= -->
+                    <div class="mb-4">
+
+                        <label
+                            for="taskDescription"
+                            class="form-label"
+                        >
+                            Descripción
+                            <span class="text-muted">
+                                (opcional)
+                            </span>
+                        </label>
+
+                        <textarea
+                            class="form-control fluxa-form-control fluxa-textarea"
+                            id="taskDescription"
+                            name="taskDescription"
+                            rows="3"
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- =========================================
+                         PROYECTO / FECHA / PRIORIDAD
+                         ========================================= -->
+                    <div class="row g-3 mb-4">
+
+
+                        <!-- Proyecto -->
+                        <div class="col-12 col-md-4">
+
+                            <label
+                                for="taskProject"
+                                class="form-label"
+                            >
+                                Proyecto
+                            </label>
+
+                            <div class="fluxa-select-wrapper">
+
+                                <select
+                                    class="form-select fluxa-form-control"
+                                    id="taskProject"
+                                    name="taskProject"
+                                >
+
+                                    <option selected disabled>
+                                        Seleccionar
+                                    </option>
+
+                                    <option value="wireframes">
+                                        Wireframes
+                                    </option>
+
+                                    <option value="lanzamiento">
+                                        Lanzamiento App
+                                    </option>
+
+                                    <option value="testing">
+                                        Testing
+                                    </option>
+
+                                    <option value="backend">
+                                        Backend
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Fecha -->
+                        <div class="col-12 col-md-4">
+
+                            <label
+                                for="taskDate"
+                                class="form-label"
+                            >
+                                Fecha
+                            </label>
+
+                            <div class="fluxa-input-icon-wrapper">
+
+                                <input
+                                    type="date"
+                                    class="form-control fluxa-form-control"
+                                    id="taskDate"
+                                    name="taskDate"
+                                >
+
+                                <i class="bi bi-calendar3 fluxa-input-icon"></i>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Prioridad -->
+                        <div class="col-12 col-md-4">
+
+                            <label
+                                for="taskPriority"
+                                class="form-label"
+                            >
+                                Prioridad
+                            </label>
+
+                            <select
+                                class="form-select fluxa-form-control"
+                                id="taskPriority"
+                                name="taskPriority"
+                            >
+
+                                <option selected disabled>
+                                    Seleccionar
+                                </option>
+
+                                <option value="low">
+                                    Baja
+                                </option>
+
+                                <option value="medium">
+                                    Media
+                                </option>
+
+                                <option value="high">
+                                    Alta
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- =========================================
+                         ETIQUETAS
+                         ========================================= -->
+                    <div class="mb-4">
+
+                        <label
+                            for="taskTags"
+                            class="form-label"
+                        >
+                            Etiquetas
+                        </label>
+
+                        <select
+                            class="form-select fluxa-form-control"
+                            id="taskTags"
+                            name="taskTags"
+                        >
+
+                            <option selected disabled>
+                                Seleccionar etiqueta
+                            </option>
+
+                            <option value="frontend">
+                                Frontend
+                            </option>
+
+                            <option value="backend">
+                                Backend
+                            </option>
+
+                            <option value="design">
+                                Diseño
+                            </option>
+
+                            <option value="testing">
+                                Testing
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- =========================================
+                         RECORDATORIO
+                         ========================================= -->
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+
+                        <!-- Checkbox -->
+                        <div class="form-check fluxa-reminder">
+
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="taskReminder"
+                                name="taskReminder"
+                            >
+
+                            <label
+                                class="form-check-label"
+                                for="taskReminder"
+                            >
+                                Recordatorio
+                            </label>
+
+                        </div>
+
+
+                        <!-- Icono -->
+                        <button
+                            type="button"
+                            class="btn fluxa-reminder-button"
+                            aria-label="Configurar recordatorio"
+                        >
+
+                            <i class="bi bi-bell"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- =========================================
+                         FOOTER DEL FORMULARIO
+                         ========================================= -->
+                    <div class="d-flex align-items-center justify-content-between">
+
+                        <!-- Cancelar -->
+                        <button
+                            type="button"
+                            class="btn fluxa-cancel-button"
+                            data-bs-dismiss="modal"
+                        >
+                            Cancelar
+                        </button>
+
+
+                        <!-- Agregar -->
+                        <button
+                            type="submit"
+                            class="btn fluxa-primary-button"
+                        >
+
+                            Agregar tarea
+
+                            <i class="bi bi-plus-lg"></i>
+
+                        </button>
+
+                    </div>
+
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
 </html>
