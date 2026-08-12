@@ -4,25 +4,20 @@
 
 :root {
 
-    /* Color principal de Fluxa */
     --fluxa-primary: #6c5ce7;
 
-    /* Color de fondo principal */
     --fluxa-background: #f8f9fc;
 
-    /* Color de las tarjetas */
     --fluxa-surface: #ffffff;
 
-    /* Color principal del texto */
     --fluxa-text: #212529;
 
-    /* Color secundario del texto */
     --fluxa-text-muted: #6c757d;
 
-    /* Color de los bordes */
     --fluxa-border: #e9ecef;
 
 }
+
 
 /* =========================================================
    ESTILOS GENERALES
@@ -30,11 +25,77 @@
 
 body {
 
-    /* Fondo general de la aplicación */
     background-color: var(--fluxa-background);
 
-    /* Color principal del texto */
     color: var(--fluxa-text);
 
 }
 
+
+/* =========================================================
+   LAYOUT PRINCIPAL
+   ========================================================= */
+
+.fluxa-main {
+
+    padding-top: 2rem;
+
+    padding-bottom: 2rem;
+
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.fluxa-sidebar {
+
+    background-color: var(--fluxa-surface);
+
+    border-right: 1px solid var(--fluxa-border);
+
+    padding: 1.5rem;
+
+}
+
+
+/* =========================================================
+   DASHBOARD
+   ========================================================= */
+
+.fluxa-dashboard {
+
+    padding-left: 2rem;
+
+    padding-right: 2rem;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .fluxa-sidebar {
+
+        border-right: none;
+
+        border-bottom: 1px solid var(--fluxa-border);
+
+        margin-bottom: 1.5rem;
+
+    }
+
+
+    .fluxa-dashboard {
+
+        padding-left: 1rem;
+
+        padding-right: 1rem;
+
+    }
+
+}
