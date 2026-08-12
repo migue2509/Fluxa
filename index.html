@@ -1,28 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
+
+    <!-- Configuración básica del documento -->
     <meta charset="UTF-8">
+
+    <!-- Permite que el diseño sea responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título de la aplicación -->
     <title>Fluxa | Gestión de tareas</title>
-    <!-- conexion a bootstrap  -->
+
+    <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
+
+    <!-- =========================================================
+     BOOTSTRAP ICONS
+     ========================================================= -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- CSS personalizado de Fluxa -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+
+
 </head>
 
 <body>
 
-    <!-- ===== Header ===== -->
-    <header class="border-bottom">
+    <!-- =========================================================
+     HEADER PRINCIPAL
+     ========================================================= -->
+    <header class="border-bottom fluxa-header">
 
-        <div class="container-fluid py-3">
+        <div class="container-fluid">
 
-            <div class="d-flex align-items-center">
+            <div class="d-flex align-items-center justify-content-between">
 
-                <!-- Logo -->
+                <!-- =================================================
+                 LOGO
+                 ================================================= -->
                 <a href="#" class="text-decoration-none">
-                    <img src="assets/img/fluxa-logo.svg" alt="Fluxa - Gestión de tareas" height="50">
+
+                    <img src="assets/img/Fluxa-logo.png" alt="Fluxa - Gestión de tareas" class="fluxa-logo">
+
                 </a>
+
+
+                <!-- =================================================
+                 ACCIONES DEL HEADER
+                 ================================================= -->
+                <div class="d-flex align-items-center gap-3">
+
+                    <!-- Notificaciones -->
+                    <div class="position-relative">
+
+                        <button type="button" class="btn btn-light fluxa-notification-button"
+                            aria-label="Ver notificaciones">
+
+                            <i class="bi bi-bell"></i>
+
+                        </button>
+
+
+                        <!-- Indicador -->
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                            aria-label="Tienes nuevas notificaciones">
+                            3
+                        </span>
+
+                    </div>
+
+
+                    <!-- Usuario -->
+                    <div class="d-flex align-items-center gap-2">
+
+                        <!-- Avatar -->
+                        <div class="fluxa-avatar">
+                            M
+                        </div>
+
+                        <!-- Nombre -->
+                        <span class="fw-semibold d-none d-md-inline">
+                            Miguel
+                        </span>
+
+                    </div>
+
+                </div>
 
             </div>
 
@@ -30,89 +96,185 @@
 
     </header>
 
-    <!-- ===== Contenido Principal ===== -->
-    <main>
+
+    <!-- =========================================================
+         CONTENIDO PRINCIPAL
+         ========================================================= -->
+    <main class="fluxa-main">
+
         <div class="container-fluid">
 
             <div class="row">
 
-                <!-- ===== Sidebar ===== -->
-                <aside class="col-12 col-lg-3">
 
-                    <!-- Botón para crear una nueva tarea -->
-                    <button type="button" class="btn btn-primary w-100">
-                        <span>+</span>
+                <!-- =================================================
+                     SIDEBAR
+                     ================================================= -->
+                <aside class="col-12 col-lg-3 fluxa-sidebar">
+
+                    <!-- =============================================
+     BOTÓN NUEVA TAREA
+     ============================================= -->
+                    <button type="button" class="btn fluxa-new-task-button" data-bs-toggle="modal"
+                        data-bs-target="#createTaskModal">
+                        <i class="bi bi-plus-lg"></i>
                         Nueva tarea
                     </button>
 
-                    <!-- ===== Navegación principal ===== -->
+
+                    <!-- =============================================
+     NAVEGACIÓN PRINCIPAL
+     ============================================= -->
                     <nav class="mt-4" aria-label="Navegación principal">
 
-                        <ul class="list-unstyled">
+                        <ul class="list-unstyled fluxa-sidebar-nav">
+
 
                             <!-- Todas las tareas -->
                             <li>
-                                <a href="#" class="nav-link">
-                                    Todas las tareas
+
+                                <a href="#" class="nav-link fluxa-nav-link active" aria-current="page">
+
+                                    <i class="bi bi-list-task"></i>
+
+                                    <span>
+                                        Todas las tareas
+                                    </span>
+
                                 </a>
+
                             </li>
+
 
                             <!-- Mis tareas -->
                             <li>
-                                <a href="#" class="nav-link">
-                                    Mis tareas
+
+                                <a href="#" class="nav-link fluxa-nav-link">
+
+                                    <i class="bi bi-person-check"></i>
+
+                                    <span>
+                                        Mis tareas
+                                    </span>
+
                                 </a>
+
                             </li>
 
-                            <!-- Tareas importantes -->
+
+                            <!-- Importantes -->
                             <li>
-                                <a href="#" class="nav-link">
-                                    Importantes
+
+                                <a href="#" class="nav-link fluxa-nav-link">
+
+                                    <i class="bi bi-star"></i>
+
+                                    <span>
+                                        Importantes
+                                    </span>
+
                                 </a>
+
                             </li>
 
-                            <!-- Tareas completadas -->
+
+                            <!-- Completadas -->
                             <li>
-                                <a href="#" class="nav-link">
-                                    Completadas
+
+                                <a href="#" class="nav-link fluxa-nav-link">
+
+                                    <i class="bi bi-check2-circle"></i>
+
+                                    <span>
+                                        Completadas
+                                    </span>
+
                                 </a>
+
                             </li>
+
 
                         </ul>
 
                     </nav>
 
-                    <!-- ===== Sección de proyectos ===== -->
+
+
+                    <!-- =============================================
+     SECCIÓN DE PROYECTOS
+     ============================================= -->
                     <section class="mt-4" aria-labelledby="projects-title">
 
-                        <!-- Título de la sección -->
-                        <h2 id="projects-title" class="h6">
-                            Proyectos
-                        </h2>
+                        <!-- Encabezado -->
+                        <div class="d-flex align-items-center justify-content-between">
 
-                        <!-- Lista de proyectos -->
-                        <ul class="list-unstyled">
+                            <h2 id="projects-title" class="h6 mb-0">
+                                Proyectos
+                            </h2>
 
-                            <!-- Proyecto: Trabajo -->
+
+                            <!-- Agregar proyecto -->
+                            <button type="button" class="btn btn-sm fluxa-add-project-button"
+                                aria-label="Agregar proyecto">
+
+                                <i class="bi bi-plus-lg"></i>
+
+                            </button>
+
+                        </div>
+
+
+                        <!-- Lista -->
+                        <ul class="list-unstyled mt-3 fluxa-project-list">
+
+
+                            <!-- Trabajo -->
                             <li>
-                                <a href="#" class="nav-link">
-                                    Trabajo
+
+                                <a href="#" class="fluxa-project-link">
+
+                                    <span class="fluxa-project-dot"></span>
+
+                                    <span>
+                                        Trabajo
+                                    </span>
+
                                 </a>
+
                             </li>
 
-                            <!-- Proyecto: Personal -->
+
+                            <!-- Personal -->
                             <li>
-                                <a href="#" class="nav-link">
-                                    Personal
+
+                                <a href="#" class="fluxa-project-link">
+
+                                    <span class="fluxa-project-dot"></span>
+
+                                    <span>
+                                        Personal
+                                    </span>
+
                                 </a>
+
                             </li>
 
-                            <!-- Proyecto: Universidad -->
+
+                            <!-- Universidad -->
                             <li>
-                                <a href="#" class="nav-link">
-                                    Universidad
+
+                                <a href="#" class="fluxa-project-link">
+
+                                    <span class="fluxa-project-dot"></span>
+
+                                    <span>
+                                        Universidad
+                                    </span>
+
                                 </a>
+
                             </li>
+
 
                         </ul>
 
@@ -120,18 +282,574 @@
 
 
 
+
+
                 </aside>
 
-                <!-- ===== Contenido ===== -->
-                <section class="col-12 col-lg-9">
+                <!-- =========================================================
+     DASHBOARD
+     ========================================================= -->
+                <section class="col-12 col-lg-9 fluxa-dashboard">
 
-                    <!-- Saludo -->
+                    <!-- =====================================================
+         ENCABEZADO DEL DASHBOARD
+         ===================================================== -->
+                    <header class="fluxa-dashboard-header">
 
-                    <!-- Estadísticas -->
+                        <!-- Saludo principal -->
+                        <h1 class="display-6 fw-bold mb-2">
+                            Buenos días, Miguel 👋
+                        </h1>
 
-                    <!-- Filtros -->
+                        <!-- Descripción -->
+                        <p class="text-muted mb-0">
+                            Aquí tienes un resumen de tus tareas.
+                        </p>
 
-                    <!-- Lista de tareas -->
+                    </header>
+
+
+                    <!-- =====================================================
+         RESUMEN DE TAREAS
+         ===================================================== -->
+                    <section class="fluxa-task-summary" aria-labelledby="task-summary-title">
+
+                        <!-- Título accesible -->
+                        <h2 id="task-summary-title" class="visually-hidden">
+                            Resumen de tareas
+                        </h2>
+
+
+                        <!-- Grid de resumen -->
+                        <div class="row g-3">
+
+
+                            <!-- =================================================
+                 CARD: TAREAS PENDIENTES
+                 ================================================= -->
+                            <div class="col-12 col-md-4">
+
+                                <article class="card fluxa-summary-card h-100 shadow-sm">
+
+                                    <div class="card-body">
+
+                                        <!-- Encabezado de la card -->
+                                        <div class="d-flex align-items-center justify-content-between mb-3">
+
+                                            <span class="text-muted">
+                                                Pendientes
+                                            </span>
+
+                                            <span class="fluxa-summary-icon fluxa-summary-icon-warning">
+                                                <i class="bi bi-clock"></i>
+                                            </span>
+
+                                        </div>
+
+
+                                        <!-- Cantidad -->
+                                        <p class="display-6 fw-bold mb-1">
+                                            12
+                                        </p>
+
+
+                                        <!-- Descripción -->
+                                        <p class="text-muted mb-0">
+                                            tareas pendientes
+                                        </p>
+
+                                    </div>
+
+                                </article>
+
+                            </div>
+
+
+                            <!-- =================================================
+                 CARD: TAREAS EN PROGRESO
+                 ================================================= -->
+                            <div class="col-12 col-md-4">
+
+                                <article class="card fluxa-summary-card h-100 shadow-sm">
+
+                                    <div class="card-body">
+
+                                        <!-- Encabezado -->
+                                        <div class="d-flex align-items-center justify-content-between mb-3">
+
+                                            <span class="text-muted">
+                                                En progreso
+                                            </span>
+
+                                            <span class="fluxa-summary-icon fluxa-summary-icon-primary">
+                                                <i class="bi bi-arrow-repeat"></i>
+                                            </span>
+
+                                        </div>
+
+
+                                        <!-- Cantidad -->
+                                        <p class="display-6 fw-bold mb-1">
+                                            4
+                                        </p>
+
+
+                                        <!-- Descripción -->
+                                        <p class="text-muted mb-0">
+                                            tareas en progreso
+                                        </p>
+
+                                    </div>
+
+                                </article>
+
+                            </div>
+
+
+                            <!-- =================================================
+                 CARD: TAREAS COMPLETADAS
+                 ================================================= -->
+                            <div class="col-12 col-md-4">
+
+                                <article class="card fluxa-summary-card h-100 shadow-sm">
+
+                                    <div class="card-body">
+
+                                        <!-- Encabezado -->
+                                        <div class="d-flex align-items-center justify-content-between mb-3">
+
+                                            <span class="text-muted">
+                                                Completadas
+                                            </span>
+
+                                            <span class="fluxa-summary-icon fluxa-summary-icon-success">
+                                                <i class="bi bi-check2-circle"></i>
+                                            </span>
+
+                                        </div>
+
+
+                                        <!-- Cantidad -->
+                                        <p class="display-6 fw-bold mb-1">
+                                            8
+                                        </p>
+
+
+                                        <!-- Descripción -->
+                                        <p class="text-muted mb-0">
+                                            tareas completadas
+                                        </p>
+
+                                    </div>
+
+                                </article>
+
+                            </div>
+
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- =====================================================
+         CONTENIDO INFERIOR DEL DASHBOARD
+         ===================================================== -->
+                    <div class="row g-4 mt-1">
+
+
+                        <!-- =================================================
+             SECCIÓN DE TAREAS
+             ================================================= -->
+                        <div class="col-12 col-xl-8">
+
+                            <section class="fluxa-tasks-section" aria-labelledby="tasks-title">
+
+                                <!-- =============================================
+                     ENCABEZADO DE TAREAS
+                     ============================================= -->
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+
+                                    <div>
+
+                                        <h2 id="tasks-title" class="h4 fw-bold mb-1">
+                                            Mis tareas
+                                        </h2>
+
+                                        <p class="text-muted mb-0">
+                                            Organiza y revisa tus tareas pendientes.
+                                        </p>
+
+                                    </div>
+
+
+                                    <!-- Ver todas -->
+                                    <a href="#" class="btn btn-sm btn-light fluxa-view-all-button">
+                                        Ver todas
+                                    </a>
+
+                                </div>
+
+
+                                <!-- =============================================
+                     FILTROS DE TAREAS
+                     ============================================= -->
+                                <div class="btn-group mb-3" role="group" aria-label="Filtrar tareas">
+
+                                    <button type="button" class="btn btn-sm btn-primary">
+                                        Todas
+                                    </button>
+
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">
+                                        Pendientes
+                                    </button>
+
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">
+                                        Completadas
+                                    </button>
+
+                                </div>
+
+
+                                <!-- =============================================
+                     LISTA DE TAREAS
+                     ============================================= -->
+                                <div class="card border-0 shadow-sm fluxa-task-list-card">
+
+                                    <div class="card-body p-0">
+
+                                        <ul class="list-group list-group-flush">
+
+
+                                            <!-- =================================
+                                 TAREA 1
+                                 ================================= -->
+                                            <li class="list-group-item fluxa-task-item">
+
+                                                <div class="d-flex align-items-start gap-3">
+
+
+                                                    <!-- Checkbox -->
+                                                    <div class="form-check pt-1">
+
+                                                        <input class="form-check-input" type="checkbox" id="task-1">
+
+                                                    </div>
+
+
+                                                    <!-- Información -->
+                                                    <div class="flex-grow-1">
+
+                                                        <label for="task-1" class="fluxa-task-title">
+                                                            Diseñar interfaz del Dashboard
+                                                        </label>
+
+                                                        <p class="text-muted small mb-2">
+                                                            Crear la estructura principal de la página.
+                                                        </p>
+
+
+                                                        <!-- Metadata -->
+                                                        <div class="d-flex flex-wrap align-items-center gap-2">
+
+                                                            <span class="badge text-bg-primary">
+                                                                Trabajo
+                                                            </span>
+
+                                                            <span class="text-muted small">
+                                                                <i class="bi bi-calendar3"></i>
+                                                                Hoy
+                                                            </span>
+
+                                                        </div>
+
+                                                    </div>
+
+
+                                                    <!-- Prioridad -->
+                                                    <span class="badge fluxa-priority-badge" title="Prioridad alta">
+                                                        <i class="bi bi-star-fill"></i>
+                                                    </span>
+
+
+                                                </div>
+
+                                            </li>
+
+
+                                            <!-- =================================
+                                 TAREA 2
+                                 ================================= -->
+                                            <li class="list-group-item fluxa-task-item">
+
+                                                <div class="d-flex align-items-start gap-3">
+
+
+                                                    <!-- Checkbox -->
+                                                    <div class="form-check pt-1">
+
+                                                        <input class="form-check-input" type="checkbox" id="task-2">
+
+                                                    </div>
+
+
+                                                    <!-- Información -->
+                                                    <div class="flex-grow-1">
+
+                                                        <label for="task-2" class="fluxa-task-title">
+                                                            Revisar documentación de Bootstrap
+                                                        </label>
+
+                                                        <p class="text-muted small mb-2">
+                                                            Revisar componentes y utilidades utilizadas.
+                                                        </p>
+
+
+                                                        <div class="d-flex flex-wrap align-items-center gap-2">
+
+                                                            <span class="badge text-bg-secondary">
+                                                                Universidad
+                                                            </span>
+
+                                                            <span class="text-muted small">
+                                                                <i class="bi bi-calendar3"></i>
+                                                                Mañana
+                                                            </span>
+
+                                                        </div>
+
+                                                    </div>
+
+
+                                                    <!-- Prioridad -->
+                                                    <span class="badge fluxa-priority-badge" title="Prioridad normal">
+                                                        <i class="bi bi-star"></i>
+                                                    </span>
+
+
+                                                </div>
+
+                                            </li>
+
+
+                                            <!-- =================================
+                                 TAREA 3
+                                 ================================= -->
+                                            <li class="list-group-item fluxa-task-item">
+
+                                                <div class="d-flex align-items-start gap-3">
+
+
+                                                    <!-- Checkbox -->
+                                                    <div class="form-check pt-1">
+
+                                                        <input class="form-check-input" type="checkbox" id="task-3">
+
+                                                    </div>
+
+
+                                                    <!-- Información -->
+                                                    <div class="flex-grow-1">
+
+                                                        <label for="task-3" class="fluxa-task-title">
+                                                            Preparar presentación del proyecto
+                                                        </label>
+
+                                                        <p class="text-muted small mb-2">
+                                                            Organizar las diapositivas para la presentación.
+                                                        </p>
+
+
+                                                        <div class="d-flex flex-wrap align-items-center gap-2">
+
+                                                            <span class="badge text-bg-success">
+                                                                Personal
+                                                            </span>
+
+                                                            <span class="text-muted small">
+                                                                <i class="bi bi-calendar3"></i>
+                                                                Viernes
+                                                            </span>
+
+                                                        </div>
+
+                                                    </div>
+
+
+                                                    <!-- Prioridad -->
+                                                    <span class="badge fluxa-priority-badge" title="Prioridad normal">
+                                                        <i class="bi bi-star"></i>
+                                                    </span>
+
+
+                                                </div>
+
+                                            </li>
+
+
+                                        </ul>
+
+                                    </div>
+
+                                </div>
+
+                            </section>
+
+                        </div>
+
+
+                        <!-- =================================================
+             COLUMNA DERECHA
+             ================================================= -->
+                        <div class="col-12 col-xl-4">
+
+
+                            <!-- ===============================================
+                 PROGRESO
+                 =============================================== -->
+                            <section class="card border-0 shadow-sm fluxa-progress-card"
+                                aria-labelledby="progress-title">
+
+                                <div class="card-body">
+
+
+                                    <!-- Encabezado -->
+                                    <div class="d-flex align-items-center justify-content-between mb-3">
+
+                                        <h2 id="progress-title" class="h5 fw-bold mb-0">
+                                            Progreso
+                                        </h2>
+
+                                        <i class="bi bi-bar-chart-line text-muted"></i>
+
+                                    </div>
+
+
+                                    <!-- Porcentaje -->
+                                    <div class="d-flex align-items-end gap-2 mb-2">
+
+                                        <span class="display-6 fw-bold">
+                                            67%
+                                        </span>
+
+                                        <span class="text-muted mb-2">
+                                            completado
+                                        </span>
+
+                                    </div>
+
+
+                                    <!-- Barra de progreso -->
+                                    <div class="progress mb-3" role="progressbar" aria-label="Progreso de tareas"
+                                        aria-valuenow="67" aria-valuemin="0" aria-valuemax="100">
+
+                                        <div class="progress-bar" style="width: 67%"></div>
+
+                                    </div>
+
+
+                                    <p class="text-muted small mb-0">
+                                        Has completado 8 de 12 tareas.
+                                    </p>
+
+                                </div>
+
+                            </section>
+
+
+                            <!-- ===============================================
+                 PRÓXIMAS TAREAS
+                 =============================================== -->
+                            <section class="card border-0 shadow-sm fluxa-upcoming-card mt-4"
+                                aria-labelledby="upcoming-title">
+
+                                <div class="card-body">
+
+
+                                    <!-- Encabezado -->
+                                    <div class="d-flex align-items-center justify-content-between mb-3">
+
+                                        <h2 id="upcoming-title" class="h5 fw-bold mb-0">
+                                            Próximas tareas
+                                        </h2>
+
+                                        <i class="bi bi-calendar3 text-muted"></i>
+
+                                    </div>
+
+
+                                    <!-- Lista -->
+                                    <ul class="list-unstyled mb-0">
+
+
+                                        <!-- Próxima tarea 1 -->
+                                        <li class="fluxa-upcoming-item">
+
+                                            <div>
+
+                                                <p class="fw-semibold mb-1">
+                                                    Revisar documentación
+                                                </p>
+
+                                                <span class="text-muted small">
+                                                    Mañana
+                                                </span>
+
+                                            </div>
+
+                                        </li>
+
+
+                                        <!-- Próxima tarea 2 -->
+                                        <li class="fluxa-upcoming-item">
+
+                                            <div>
+
+                                                <p class="fw-semibold mb-1">
+                                                    Reunión del proyecto
+                                                </p>
+
+                                                <span class="text-muted small">
+                                                    Miércoles
+                                                </span>
+
+                                            </div>
+
+                                        </li>
+
+
+                                        <!-- Próxima tarea 3 -->
+                                        <li class="fluxa-upcoming-item">
+
+                                            <div>
+
+                                                <p class="fw-semibold mb-1">
+                                                    Entregar proyecto
+                                                </p>
+
+                                                <span class="text-muted small">
+                                                    Viernes
+                                                </span>
+
+                                            </div>
+
+                                        </li>
+
+
+                                    </ul>
+
+                                </div>
+
+                            </section>
+
+
+                        </div>
+
+
+                    </div>
+
+                </section>
+
 
                 </section>
 
@@ -156,12 +874,346 @@
 
             </div>
 
+        </div>
+
+    </main>
+
+
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
+    <footer class="border-top">
+
+        <div class="container py-3 text-center">
+
+            <p class="mb-0">
+                © 2026 Fluxa. Gestión de tareas.
+            </p>
 
         </div>
-    </main>
-    <!-- ===== Conexión a bootstrap ===== -->
+
+    </footer>
+
+
+    <!-- =========================================================
+         BOOTSTRAP JAVASCRIPT
+         ========================================================= -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
+    <!-- JavaScript de la aplicación -->
+    <script src="./js/app.js"></script>
+
+    <!-- =========================================================
+     MODAL - CREAR NUEVA TAREA
+     ========================================================= -->
+    <div class="modal fade" id="createTaskModal" tabindex="-1" aria-labelledby="createTaskModalLabel"
+        aria-hidden="true">
+        <!-- Contenedor del modal -->
+        <div class="modal-dialog modal-dialog-centered">
+
+            <!-- Contenido principal -->
+            <div class="modal-content fluxa-task-modal">
+
+                <!-- =================================================
+                 ENCABEZADO
+                 ================================================= -->
+                <div class="modal-header fluxa-task-modal-header">
+
+                    <!-- Título del modal -->
+                    <h2 class="modal-title" id="createTaskModalLabel">
+                        Crear nueva tarea
+                    </h2>
+
+                    <!-- Botón para cerrar el modal -->
+                    <button type="button" class="btn fluxa-modal-close" data-bs-dismiss="modal" aria-label="Cerrar">
+                        <i class="bi bi-arrow-left"></i>
+                    </button>
+
+                </div>
+
+
+                <!-- =================================================
+                 CUERPO DEL MODAL
+                 ================================================= -->
+                <div class="modal-body fluxa-task-modal-body">
+
+                    <!-- =================================================
+                     FORMULARIO DE CREACIÓN DE TAREA
+                     ================================================= -->
+                    <form id="createTaskForm">
+
+                        <!-- =============================================
+                         ALERTA DE VALIDACIÓN
+                         Oculta inicialmente con d-none.
+                         JavaScript la mostrará si hay errores.
+                         ============================================= -->
+                        <div id="taskValidationAlert" class="alert alert-danger d-none" role="alert">
+                            Por favor, completa correctamente todos los
+                            campos obligatorios.
+                        </div>
+
+
+                        <!-- =============================================
+                         NOMBRE DE LA TAREA
+                         ============================================= -->
+                        <div class="mb-4">
+
+                            <label for="taskTitle" class="form-label">
+                                ¿Qué necesitas hacer?
+                            </label>
+
+                            <input type="text" class="form-control fluxa-form-control" id="taskTitle" name="taskTitle"
+                                required>
+
+                        </div>
+
+
+                        <!-- =============================================
+                         DESCRIPCIÓN
+                         ============================================= -->
+                        <div class="mb-4">
+
+                            <label for="taskDescription" class="form-label">
+                                Descripción
+                            </label>
+
+                            <textarea class="form-control fluxa-form-control fluxa-textarea" id="taskDescription"
+                                name="taskDescription" rows="3" required></textarea>
+
+                        </div>
+
+
+                        <!-- =============================================
+                         PROYECTO / FECHA / PRIORIDAD
+                         ============================================= -->
+                        <div class="row g-3 mb-4">
+
+                            <!-- =========================================
+                             PROYECTO
+                             ========================================= -->
+                            <div class="col-12 col-md-4">
+
+                                <label for="taskProject" class="form-label">
+                                    Proyecto
+                                </label>
+
+                                <select class="form-select fluxa-form-control" id="taskProject" name="taskProject">
+
+                                    <option value="" selected disabled>
+                                        Seleccionar
+                                    </option>
+
+                                    <option value="wireframes">
+                                        Wireframes
+                                    </option>
+
+                                    <option value="lanzamiento">
+                                        Lanzamiento App
+                                    </option>
+
+                                    <option value="testing">
+                                        Testing
+                                    </option>
+
+                                    <option value="backend">
+                                        Backend
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <!-- =========================================
+                             FECHA DE ENTREGA
+                             ========================================= -->
+                            <div class="col-12 col-md-4">
+
+                                <label for="taskDate" class="form-label">
+                                    Fecha
+                                </label>
+
+                                <div class="fluxa-input-icon-wrapper">
+
+                                    <input type="date" class="form-control fluxa-form-control" id="taskDate"
+                                        name="taskDate" required>
+
+                                    <i class="bi bi-calendar3 fluxa-input-icon"></i>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- =========================================
+                             PRIORIDAD
+                             ========================================= -->
+                            <div class="col-12 col-md-4">
+
+                                <label for="taskPriority" class="form-label">
+                                    Prioridad
+                                </label>
+
+                                <select class="form-select fluxa-form-control" id="taskPriority" name="taskPriority">
+
+                                    <option value="" selected disabled>
+                                        Seleccionar
+                                    </option>
+
+                                    <option value="low">
+                                        Baja
+                                    </option>
+
+                                    <option value="medium">
+                                        Media
+                                    </option>
+
+                                    <option value="high">
+                                        Alta
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- =============================================
+                         ESTADO
+                         ============================================= -->
+                        <div class="mb-4">
+
+                            <label for="taskStatus" class="form-label">
+                                Estado
+                            </label>
+
+                            <select class="form-select fluxa-form-control" id="taskStatus" name="taskStatus" required>
+
+                                <!--
+                                Esta opción tiene value vacío
+                                para poder comprobarla desde JS.
+                            -->
+                                <option value="" selected disabled>
+                                    Seleccionar estado
+                                </option>
+
+                                <option value="pending">
+                                    Pendiente
+                                </option>
+
+                                <option value="in-progress">
+                                    En progreso
+                                </option>
+
+                                <option value="completed">
+                                    Completada
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- =============================================
+                         ETIQUETAS
+                         ============================================= -->
+                        <div class="mb-4">
+
+                            <label for="taskTags" class="form-label">
+                                Etiquetas
+                            </label>
+
+                            <select class="form-select fluxa-form-control" id="taskTags" name="taskTags">
+
+                                <option value="" selected disabled>
+                                    Seleccionar etiqueta
+                                </option>
+
+                                <option value="frontend">
+                                    Frontend
+                                </option>
+
+                                <option value="backend">
+                                    Backend
+                                </option>
+
+                                <option value="design">
+                                    Diseño
+                                </option>
+
+                                <option value="testing">
+                                    Testing
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- =============================================
+                         RECORDATORIO
+                         ============================================= -->
+                        <div class="d-flex align-items-center justify-content-between mb-4">
+
+                            <!-- Checkbox -->
+                            <div class="form-check fluxa-reminder">
+
+                                <input class="form-check-input" type="checkbox" id="taskReminder" name="taskReminder">
+
+                                <label class="form-check-label" for="taskReminder">
+                                    Recordatorio
+                                </label>
+
+                            </div>
+
+
+                            <!-- Icono del recordatorio -->
+                            <button type="button" class="btn fluxa-reminder-button"
+                                aria-label="Configurar recordatorio">
+
+                                <i class="bi bi-bell"></i>
+
+                            </button>
+
+                        </div>
+
+
+                        <!-- =================================================
+                         BOTONES DEL FORMULARIO
+                         ================================================= -->
+                        <div class="d-flex align-items-center justify-content-between">
+
+                            <!-- =========================================
+                             CANCELAR
+                             ========================================= -->
+                            <button type="button" class="btn fluxa-cancel-button" data-bs-dismiss="modal">
+                                Cancelar
+                            </button>
+
+
+                            <!-- =========================================
+                             ENVIAR FORMULARIO
+                             ========================================= -->
+                            <button type="submit" class="btn fluxa-primary-button">
+                                Agregar tarea
+
+                                <i class="bi bi-plus-lg"></i>
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </body>
+
 
 </html>
