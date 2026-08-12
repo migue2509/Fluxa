@@ -1,0 +1,1321 @@
+/* =========================================================
+   VARIABLES GLOBALES
+   ========================================================= */
+
+:root {
+
+    --fluxa-primary: #6c5ce7;
+
+    --fluxa-primary-dark: #5848d6;
+
+    --fluxa-primary-soft: #e7e5ff;
+
+    --fluxa-background: #f8f9fc;
+
+    --fluxa-surface: #ffffff;
+
+    --fluxa-input-background: #f5f5f8;
+
+    --fluxa-text: #212529;
+
+    --fluxa-text-muted: #6c757d;
+
+    --fluxa-border: #e9ecef;
+
+}
+
+
+/* =========================================================
+   ESTILOS GENERALES
+   ========================================================= */
+
+body {
+
+    background-color: var(--fluxa-background);
+
+    color: var(--fluxa-text);
+
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.fluxa-header {
+
+    /* Fondo del encabezado */
+    background-color: var(--fluxa-surface);
+
+    /* Espacio interno */
+    padding: 0.75rem 0;
+
+}
+
+/* Logo de Fluxa */
+.fluxa-logo {
+
+    /* Altura del logo */
+    height: 40px;
+
+    /* El ancho se calcula automáticamente */
+    width: auto;
+
+}
+
+
+/* =========================================================
+   LAYOUT PRINCIPAL
+   ========================================================= */
+
+.fluxa-main {
+
+    padding-top: 2rem;
+
+    padding-bottom: 2rem;
+
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.fluxa-sidebar {
+
+    background-color: var(--fluxa-surface);
+
+    border-right: 1px solid var(--fluxa-border);
+
+    padding: 1.5rem;
+
+}
+
+
+/* =========================================================
+   DASHBOARD
+   ========================================================= */
+
+.fluxa-dashboard {
+
+    padding-left: 2rem;
+
+    padding-right: 2rem;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .fluxa-sidebar {
+
+        border-right: none;
+
+        border-bottom: 1px solid var(--fluxa-border);
+
+        margin-bottom: 1.5rem;
+
+    }
+
+
+    .fluxa-dashboard {
+
+        padding-left: 1rem;
+
+        padding-right: 1rem;
+
+    }
+
+}
+
+/* =========================================================
+   AVATAR
+   ========================================================= */
+
+.fluxa-avatar {
+
+    /* Ancho del avatar */
+    width: 38px;
+
+    /* Alto del avatar */
+    height: 38px;
+
+    /* Convertimos el elemento en un círculo */
+    border-radius: 50%;
+
+    /* Color de fondo */
+    background-color: var(--fluxa-primary);
+
+    /* Color de la letra */
+    color: #ffffff;
+
+    /* Centramos la inicial */
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    /* Peso de la letra */
+    font-weight: 600;
+
+}
+
+/* =========================================================
+   BOTÓN DE NOTIFICACIONES
+   ========================================================= */
+
+.fluxa-notification-button {
+
+    border: none;
+
+    background-color: transparent;
+
+    width: 40px;
+
+    height: 40px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: var(--fluxa-text-muted);
+
+}
+
+
+/* Estado hover */
+.fluxa-notification-button:hover {
+
+    background-color: var(--fluxa-background);
+
+    color: var(--fluxa-primary);
+
+}
+
+/* =========================================================
+   BOTÓN NUEVA TAREA
+   ========================================================= */
+
+.fluxa-new-task-button {
+
+    /* Separación entre el icono y el texto */
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 0.5rem;
+
+    /* Bordes redondeados */
+    border-radius: 10px;
+
+    /* Espacio vertical */
+    padding-top: 0.75rem;
+
+    padding-bottom: 0.75rem;
+
+}
+
+.fluxa-new-task-button:hover {
+
+    /* Oscurecemos ligeramente el botón */
+    filter: brightness(0.95);
+
+}
+
+/* =========================================================
+   NAVEGACIÓN DEL SIDEBAR
+   ========================================================= */
+
+.fluxa-sidebar-nav {
+
+    margin-bottom: 0;
+
+}
+
+
+/* Enlaces de navegación */
+.fluxa-nav-link {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.75rem;
+
+    padding: 0.75rem 1rem;
+
+    border-radius: 10px;
+
+    color: var(--fluxa-text-muted);
+
+}
+
+
+/* Iconos */
+.fluxa-nav-link i {
+
+    font-size: 1.1rem;
+
+    width: 20px;
+
+    text-align: center;
+
+}
+
+
+/* Elemento activo */
+.fluxa-nav-link.active {
+
+    background-color: var(--fluxa-primary);
+
+    color: #ffffff;
+
+}
+
+
+/* Hover */
+.fluxa-nav-link:hover {
+
+    background-color: var(--fluxa-background);
+
+    color: var(--fluxa-primary);
+
+}
+
+
+/* Hover sobre elemento activo */
+.fluxa-nav-link.active:hover {
+
+    background-color: var(--fluxa-primary);
+
+    color: #ffffff;
+
+}
+
+/* =========================================================
+   BOTÓN AGREGAR PROYECTO
+   ========================================================= */
+
+.fluxa-add-project-button {
+
+    width: 32px;
+
+    height: 32px;
+
+    border-radius: 50%;
+
+    padding: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: var(--fluxa-text-muted);
+
+}
+
+
+.fluxa-add-project-button:hover {
+
+    background-color: var(--fluxa-background);
+
+    color: var(--fluxa-primary);
+
+}
+
+
+/* =========================================================
+   LISTA DE PROYECTOS
+   ========================================================= */
+
+.fluxa-project-list {
+
+    margin-bottom: 0;
+
+}
+
+
+/* Enlace del proyecto */
+.fluxa-project-link {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.75rem;
+
+    padding: 0.5rem 0.75rem;
+
+    text-decoration: none;
+
+    color: var(--fluxa-text-muted);
+
+    border-radius: 8px;
+
+}
+
+
+/* Punto del proyecto */
+.fluxa-project-dot {
+
+    width: 8px;
+
+    height: 8px;
+
+    border-radius: 50%;
+
+    background-color: var(--fluxa-primary);
+
+    flex-shrink: 0;
+
+}
+
+
+/* Hover */
+.fluxa-project-link:hover {
+
+    background-color: var(--fluxa-background);
+
+    color: var(--fluxa-primary);
+
+}
+
+/* =========================================================
+   DASHBOARD
+   ========================================================= */
+
+.fluxa-dashboard {
+
+    /* Espacio interno del contenido */
+    padding-top: 2rem;
+
+    padding-bottom: 2rem;
+
+}
+
+
+/* =========================================================
+   ENCABEZADO DEL DASHBOARD
+   ========================================================= */
+
+.fluxa-dashboard-header {
+
+    /* Separación respecto al resumen */
+    margin-bottom: 2rem;
+
+}
+
+
+/* =========================================================
+   RESUMEN DE TAREAS
+   ========================================================= */
+
+.fluxa-task-summary {
+
+    /* Espacio inferior antes de las tareas */
+    margin-bottom: 2rem;
+
+}
+
+
+/* =========================================================
+   CARDS DE RESUMEN
+   ========================================================= */
+
+.fluxa-summary-card {
+
+    /* Eliminamos el borde de Bootstrap */
+    border: none;
+
+    /* Bordes redondeados */
+    border-radius: 14px;
+
+}
+
+
+/* Iconos de resumen */
+
+.fluxa-summary-icon {
+
+    /* Tamaño */
+    width: 40px;
+
+    height: 40px;
+
+    /* Forma circular */
+    border-radius: 50%;
+
+    /* Centrado */
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+/* Icono - pendientes */
+
+.fluxa-summary-icon-warning {
+
+    background-color: #fff3cd;
+
+    color: #856404;
+
+}
+
+
+/* Icono - progreso */
+
+.fluxa-summary-icon-primary {
+
+    background-color: #e7e5ff;
+
+    color: var(--fluxa-primary);
+
+}
+
+
+/* Icono - completadas */
+
+.fluxa-summary-icon-success {
+
+    background-color: #d1e7dd;
+
+    color: #0f5132;
+
+}
+
+
+/* =========================================================
+   SECCIÓN DE TAREAS
+   ========================================================= */
+
+.fluxa-tasks-section {
+
+    width: 100%;
+
+}
+
+
+/* =========================================================
+   BOTÓN "VER TODAS"
+   ========================================================= */
+
+.fluxa-view-all-button {
+
+    border: none;
+
+    border-radius: 8px;
+
+}
+
+
+/* =========================================================
+   CARD DE LA LISTA DE TAREAS
+   ========================================================= */
+
+.fluxa-task-list-card {
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+}
+
+
+/* =========================================================
+   ELEMENTO INDIVIDUAL DE TAREA
+   ========================================================= */
+
+.fluxa-task-item {
+
+    /* Espacio interno */
+    padding: 1.25rem;
+
+    /* Eliminamos bordes laterales */
+    border-left: none;
+
+    border-right: none;
+
+}
+
+
+/* Primera tarea */
+
+.fluxa-task-item:first-child {
+
+    border-top: none;
+
+}
+
+
+/* Última tarea */
+
+.fluxa-task-item:last-child {
+
+    border-bottom: none;
+
+}
+
+
+/* =========================================================
+   TÍTULO DE LA TAREA
+   ========================================================= */
+
+.fluxa-task-title {
+
+    /* Peso */
+    font-weight: 600;
+
+    /* Cursor */
+    cursor: pointer;
+
+    /* Color */
+    color: var(--fluxa-text);
+
+}
+
+
+/* =========================================================
+   CHECKBOX
+   ========================================================= */
+
+.fluxa-task-item .form-check-input {
+
+    width: 1.15rem;
+
+    height: 1.15rem;
+
+    cursor: pointer;
+
+}
+
+
+/* =========================================================
+   PRIORIDAD
+   ========================================================= */
+
+.fluxa-priority-badge {
+
+    /* Sin fondo fuerte */
+    background-color: transparent;
+
+    /* Color */
+    color: var(--fluxa-text-muted);
+
+    /* Tamaño */
+    font-size: 1rem;
+
+}
+
+
+/* =========================================================
+   CARD DE PROGRESO
+   ========================================================= */
+
+.fluxa-progress-card {
+
+    border-radius: 14px;
+
+}
+
+
+/* =========================================================
+   BARRA DE PROGRESO
+   ========================================================= */
+
+.fluxa-progress-card .progress {
+
+    /* Altura */
+    height: 8px;
+
+    /* Bordes */
+    border-radius: 999px;
+
+}
+
+
+/* =========================================================
+   PRÓXIMAS TAREAS
+   ========================================================= */
+
+.fluxa-upcoming-card {
+
+    border-radius: 14px;
+
+}
+
+
+/* Elemento de próxima tarea */
+
+.fluxa-upcoming-item {
+
+    /* Espaciado */
+    padding: 0.75rem 0;
+
+    /* Línea divisoria */
+    border-bottom: 1px solid var(--fluxa-border);
+
+}
+
+
+/* Eliminamos la línea del último elemento */
+
+.fluxa-upcoming-item:last-child {
+
+    border-bottom: none;
+
+    padding-bottom: 0;
+
+}
+
+
+/* Primer elemento */
+
+.fluxa-upcoming-item:first-child {
+
+    padding-top: 0;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .fluxa-dashboard {
+
+        padding-top: 1.5rem;
+
+    }
+
+}
+
+
+@media (max-width: 575.98px) {
+
+    .fluxa-dashboard {
+
+        padding-top: 1rem;
+
+        padding-bottom: 1rem;
+
+    }
+
+
+    .fluxa-dashboard-header {
+
+        margin-bottom: 1.5rem;
+
+    }
+
+
+    .fluxa-dashboard-header h1 {
+
+        font-size: 1.75rem;
+
+    }
+
+
+    .fluxa-task-item {
+
+        padding: 1rem;
+
+    }
+
+}
+
+/* =========================================================
+   MODAL - CREAR NUEVA TAREA
+   ========================================================= */
+
+
+/* =========================================================
+   CONTENEDOR PRINCIPAL DEL MODAL
+   ========================================================= */
+
+.fluxa-task-modal {
+
+    /* Fondo principal */
+    background-color: var(--fluxa-surface);
+
+    /* Eliminamos el borde por defecto de Bootstrap */
+    border: none;
+
+    /* Bordes redondeados */
+    border-radius: 20px;
+
+    /* Evita que el contenido sobresalga */
+    overflow: hidden;
+
+}
+
+
+/* =========================================================
+   HEADER DEL MODAL
+   ========================================================= */
+
+.fluxa-task-modal-header {
+
+    /* Eliminamos la línea inferior de Bootstrap */
+    border-bottom: none;
+
+    /* Espaciado interno */
+    padding: 2rem 2.5rem 1rem;
+
+}
+
+
+/* =========================================================
+   TÍTULO
+   ========================================================= */
+
+.fluxa-task-modal-header .modal-title {
+
+    /* Tamaño del título */
+    font-size: 2rem;
+
+    /* Grosor */
+    font-weight: 700;
+
+    /* Color principal del texto */
+    color: var(--fluxa-text);
+
+    /* Evita márgenes inesperados */
+    margin: 0;
+
+}
+
+
+/* =========================================================
+   BOTÓN CERRAR
+   ========================================================= */
+
+.fluxa-modal-close {
+
+    /* Tamaño */
+    width: 40px;
+    height: 40px;
+
+    /* Sin borde */
+    border: none;
+
+    /* Fondo transparente */
+    background-color: transparent;
+
+    /* Color */
+    color: var(--fluxa-text);
+
+    /* Centrar icono */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Tamaño del icono */
+    font-size: 1.3rem;
+
+    /* Bordes */
+    border-radius: 8px;
+
+}
+
+
+/* Hover */
+
+.fluxa-modal-close:hover {
+
+    background-color: var(--fluxa-background);
+
+    color: var(--fluxa-primary);
+
+}
+
+
+/* =========================================================
+   CUERPO DEL MODAL
+   ========================================================= */
+
+.fluxa-task-modal-body {
+
+    /* Espaciado */
+    padding: 1rem 2.5rem 2.5rem;
+
+}
+
+
+/* =========================================================
+   LABELS
+   ========================================================= */
+
+.fluxa-task-modal .form-label {
+
+    /* Tamaño */
+    font-size: 1rem;
+
+    /* Grosor */
+    font-weight: 500;
+
+    /* Color */
+    color: var(--fluxa-text);
+
+    /* Separación del input */
+    margin-bottom: 0.5rem;
+
+}
+
+
+/* =========================================================
+   INPUTS Y SELECTS
+   ========================================================= */
+
+.fluxa-form-control {
+
+    /* Fondo gris claro como en el diseño */
+    background-color: var(--fluxa-input-background);
+
+    /* Eliminamos el borde */
+    border: 1px solid transparent;
+
+    /* Bordes redondeados */
+    border-radius: 10px;
+
+    /* Altura */
+    min-height: 48px;
+
+    /* Texto */
+    color: var(--fluxa-text);
+
+    /* Sin sombra */
+    box-shadow: none;
+
+    /* Transición */
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+/* =========================================================
+   INPUT DE TEXTO
+   ========================================================= */
+
+.fluxa-task-modal input.fluxa-form-control {
+
+    height: 48px;
+
+}
+
+
+/* =========================================================
+   TEXTAREA
+   ========================================================= */
+
+.fluxa-textarea {
+
+    /* Altura inicial */
+    min-height: 92px;
+
+    /* Permite cambiar tamaño verticalmente */
+    resize: vertical;
+
+}
+
+
+/* =========================================================
+   FOCUS DE INPUTS
+   ========================================================= */
+
+.fluxa-form-control:focus {
+
+    /* Fondo blanco al seleccionar */
+    background-color: var(--fluxa-surface);
+
+    /* Borde principal */
+    border-color: var(--fluxa-primary);
+
+    /* Glow suave */
+    box-shadow: 0 0 0 3px var(--fluxa-primary-soft);
+
+}
+
+
+/* =========================================================
+   PLACEHOLDER
+   ========================================================= */
+
+.fluxa-form-control::placeholder {
+
+    color: var(--fluxa-text-muted);
+
+}
+
+
+/* =========================================================
+   SELECT
+   ========================================================= */
+
+.fluxa-task-modal .form-select {
+
+    /* Cursor */
+    cursor: pointer;
+
+}
+
+
+/* =========================================================
+   INPUT DE FECHA
+   ========================================================= */
+
+.fluxa-input-icon-wrapper {
+
+    /* Necesario para posicionar el icono */
+    position: relative;
+
+}
+
+
+/* Icono */
+
+.fluxa-input-icon {
+
+    position: absolute;
+
+    left: 0.9rem;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: var(--fluxa-text-muted);
+
+    pointer-events: none;
+
+}
+
+
+/* Espacio para el icono */
+
+.fluxa-input-icon-wrapper input {
+
+    padding-left: 2.6rem;
+
+}
+
+
+/* =========================================================
+   ALERTA DE VALIDACIÓN
+   ========================================================= */
+
+#taskValidationAlert {
+
+    /* Bordes redondeados */
+    border-radius: 10px;
+
+    /* Sin borde adicional */
+    border: none;
+
+    /* Espaciado */
+    padding: 0.85rem 1rem;
+
+    /* Tamaño */
+    font-size: 0.9rem;
+
+}
+
+
+/* =========================================================
+   RECORDATORIO
+   ========================================================= */
+
+.fluxa-reminder {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.5rem;
+
+}
+
+
+/* Checkbox */
+
+.fluxa-reminder .form-check-input {
+
+    width: 21px;
+
+    height: 21px;
+
+    margin-top: 0;
+
+    border-color: var(--fluxa-border);
+
+    cursor: pointer;
+
+}
+
+
+/* Checkbox seleccionado */
+
+.fluxa-reminder .form-check-input:checked {
+
+    background-color: var(--fluxa-primary);
+
+    border-color: var(--fluxa-primary);
+
+}
+
+
+/* Label del checkbox */
+
+.fluxa-reminder .form-check-label {
+
+    color: var(--fluxa-text);
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+}
+
+
+/* =========================================================
+   BOTÓN DEL RECORDATORIO
+   ========================================================= */
+
+.fluxa-reminder-button {
+
+    width: 42px;
+
+    height: 42px;
+
+    /* Sin borde */
+    border: none;
+
+    /* Fondo transparente */
+    background-color: transparent;
+
+    /* Color */
+    color: var(--fluxa-text-muted);
+
+    /* Tamaño del icono */
+    font-size: 1.4rem;
+
+    /* Centrado */
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 8px;
+
+}
+
+
+/* Hover */
+
+.fluxa-reminder-button:hover {
+
+    background-color: var(--fluxa-background);
+
+    color: var(--fluxa-primary);
+
+}
+
+
+/* =========================================================
+   BOTÓN CANCELAR
+   ========================================================= */
+
+.fluxa-cancel-button {
+
+    /* Sin borde */
+    border: none;
+
+    /* Fondo transparente */
+    background-color: transparent;
+
+    /* Texto */
+    color: var(--fluxa-text);
+
+    /* Grosor */
+    font-weight: 500;
+
+    /* Espaciado */
+    padding: 0.75rem 0;
+
+}
+
+
+/* Hover */
+
+.fluxa-cancel-button:hover {
+
+    color: var(--fluxa-primary);
+
+    background-color: transparent;
+
+}
+
+
+/* =========================================================
+   BOTÓN PRINCIPAL - AGREGAR TAREA
+   ========================================================= */
+
+.fluxa-primary-button {
+
+    /* Color principal de Fluxa */
+    background-color: var(--fluxa-primary);
+
+    /* Texto blanco */
+    color: #ffffff;
+
+    /* Sin borde */
+    border: none;
+
+    /* Bordes */
+    border-radius: 10px;
+
+    /* Tamaño */
+    min-height: 48px;
+
+    /* Espaciado horizontal */
+    padding: 0.75rem 1.25rem;
+
+    /* Grosor */
+    font-weight: 500;
+
+    /* Centrar contenido */
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    /* Separación entre texto e icono */
+    gap: 0.5rem;
+
+    /* Transición */
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+/* Hover */
+
+.fluxa-primary-button:hover {
+
+    background-color: var(--fluxa-primary-dark);
+
+    color: #ffffff;
+
+}
+
+
+/* Efecto al presionar */
+
+.fluxa-primary-button:active {
+
+    transform: scale(0.98);
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+
+    .fluxa-task-modal-header {
+
+        padding: 1.5rem 1.5rem 1rem;
+
+    }
+
+
+    .fluxa-task-modal-body {
+
+        padding: 1rem 1.5rem 1.5rem;
+
+    }
+
+
+    .fluxa-task-modal-header .modal-title {
+
+        font-size: 1.7rem;
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - MÓVIL
+   ========================================================= */
+
+@media (max-width: 575.98px) {
+
+    .fluxa-task-modal {
+
+        border-radius: 16px;
+
+    }
+
+
+    .fluxa-task-modal-header {
+
+        padding: 1.25rem 1.25rem 0.75rem;
+
+    }
+
+
+    .fluxa-task-modal-body {
+
+        padding: 0.75rem 1.25rem 1.25rem;
+
+    }
+
+
+    .fluxa-task-modal-header .modal-title {
+
+        font-size: 1.5rem;
+
+    }
+
+
+    /*
+     * En móvil los botones ocupan más espacio
+     * para facilitar la interacción táctil.
+     */
+    .fluxa-primary-button {
+
+        padding-left: 1rem;
+
+        padding-right: 1rem;
+
+    }
+
+}
+
