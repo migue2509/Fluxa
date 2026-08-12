@@ -193,3 +193,35 @@ body {
     color: var(--fluxa-primary);
 
 }
+
+/* =========================================================
+   BOTÓN NUEVA TAREA
+   ========================================================= */
+
+.fluxa-new-task-button {
+
+    /* Separación entre el icono y el texto */
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 0.5rem;
+
+    /* Bordes redondeados */
+    border-radius: 10px;
+
+    /* Espacio vertical */
+    padding-top: 0.75rem;
+
+    padding-bottom: 0.75rem;
+
+}
+
+.fluxa-new-task-button:hover {
+
+    /* Oscurecemos ligeramente el botón */
+    filter: brightness(0.95);
+
+}
