@@ -2,14 +2,24 @@
 <html lang="es">
 
 <head>
+
+    <!-- Configuración básica del documento -->
     <meta charset="UTF-8">
+
+    <!-- Permite que el diseño sea responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Título de la aplicación -->
     <title>Fluxa | Gestión de tareas</title>
 
     <!-- Bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
 </head>
+
 
 <body>
 
@@ -23,8 +33,15 @@
             <div class="d-flex align-items-center">
 
                 <!-- Logo de Fluxa -->
-                <a href="#" class="text-decoration-none">
-                    <img src="assets/img/fluxa-logo.svg" alt="Fluxa - Gestión de tareas" height="50">
+                <a
+                    href="#"
+                    class="text-decoration-none"
+                >
+                    <img
+                        src="assets/img/fluxa-logo.svg"
+                        alt="Fluxa - Gestión de tareas"
+                        height="50"
+                    >
                 </a>
 
             </div>
@@ -43,13 +60,19 @@
 
             <div class="row">
 
+
                 <!-- =================================================
                      SIDEBAR
                      ================================================= -->
                 <aside class="col-12 col-lg-3">
 
-                    <!-- Botón para crear una nueva tarea -->
-                    <button type="button" class="btn btn-primary w-100">
+                    <!-- =============================================
+                         BOTÓN NUEVA TAREA
+                         ============================================= -->
+                    <button
+                        type="button"
+                        class="btn btn-primary w-100"
+                    >
                         <span>+</span>
                         Nueva tarea
                     </button>
@@ -58,34 +81,49 @@
                     <!-- =============================================
                          NAVEGACIÓN PRINCIPAL
                          ============================================= -->
-                    <nav class="mt-4" aria-label="Navegación principal">
+                    <nav
+                        class="mt-4"
+                        aria-label="Navegación principal"
+                    >
 
                         <ul class="list-unstyled">
 
                             <!-- Todas las tareas -->
                             <li>
-                                <a href="#" class="nav-link">
+                                <a
+                                    href="#"
+                                    class="nav-link"
+                                >
                                     Todas las tareas
                                 </a>
                             </li>
 
                             <!-- Mis tareas -->
                             <li>
-                                <a href="#" class="nav-link">
+                                <a
+                                    href="#"
+                                    class="nav-link"
+                                >
                                     Mis tareas
                                 </a>
                             </li>
 
                             <!-- Tareas importantes -->
                             <li>
-                                <a href="#" class="nav-link">
+                                <a
+                                    href="#"
+                                    class="nav-link"
+                                >
                                     Importantes
                                 </a>
                             </li>
 
                             <!-- Tareas completadas -->
                             <li>
-                                <a href="#" class="nav-link">
+                                <a
+                                    href="#"
+                                    class="nav-link"
+                                >
                                     Completadas
                                 </a>
                             </li>
@@ -98,33 +136,49 @@
                     <!-- =============================================
                          SECCIÓN DE PROYECTOS
                          ============================================= -->
-                    <section class="mt-4" aria-labelledby="projects-title">
+                    <section
+                        class="mt-4"
+                        aria-labelledby="projects-title"
+                    >
 
-                        <!-- Título de proyectos -->
-                        <h2 id="projects-title" class="h6">
+                        <!-- Título de la sección -->
+                        <h2
+                            id="projects-title"
+                            class="h6"
+                        >
                             Proyectos
                         </h2>
+
 
                         <!-- Lista de proyectos -->
                         <ul class="list-unstyled">
 
                             <!-- Proyecto: Trabajo -->
                             <li>
-                                <a href="#" class="nav-link">
+                                <a
+                                    href="#"
+                                    class="nav-link"
+                                >
                                     Trabajo
                                 </a>
                             </li>
 
                             <!-- Proyecto: Personal -->
                             <li>
-                                <a href="#" class="nav-link">
+                                <a
+                                    href="#"
+                                    class="nav-link"
+                                >
                                     Personal
                                 </a>
                             </li>
 
                             <!-- Proyecto: Universidad -->
                             <li>
-                                <a href="#" class="nav-link">
+                                <a
+                                    href="#"
+                                    class="nav-link"
+                                >
                                     Universidad
                                 </a>
                             </li>
@@ -141,7 +195,7 @@
 
                         <div class="card-body">
 
-                            <!-- Título de la tarjeta -->
+                            <!-- Título -->
                             <h3 class="h6 card-title">
                                 Organiza tu día
                             </h3>
@@ -159,9 +213,10 @@
 
 
                 <!-- =================================================
-                     DASHBOARD / CONTENIDO PRINCIPAL
+                     DASHBOARD
                      ================================================= -->
                 <section class="col-12 col-lg-9">
+
 
                     <!-- =============================================
                          ENCABEZADO DEL DASHBOARD
@@ -186,24 +241,39 @@
                          ============================================= -->
                     <section aria-labelledby="statistics-title">
 
-                        <!-- Título accesible para la sección -->
-                        <h2 id="statistics-title" class="visually-hidden">
+                        <!--
+                            Título accesible.
+                            Se encuentra oculto visualmente,
+                            pero sigue disponible para lectores
+                            de pantalla.
+                        -->
+                        <h2
+                            id="statistics-title"
+                            class="visually-hidden"
+                        >
                             Estadísticas de tareas
                         </h2>
 
+
+                        <!-- Grid de estadísticas -->
                         <div class="row g-3">
 
-                            <!-- Tareas pendientes -->
+
+                            <!-- =====================================
+                                 TAREAS PENDIENTES
+                                 ===================================== -->
                             <div class="col-12 col-sm-6 col-xl-3">
 
                                 <div class="card h-100">
 
                                     <div class="card-body">
 
+                                        <!-- Número -->
                                         <p class="display-6 fw-bold mb-1">
                                             12
                                         </p>
 
+                                        <!-- Descripción -->
                                         <p class="card-text">
                                             Tareas pendientes
                                         </p>
@@ -215,17 +285,21 @@
                             </div>
 
 
-                            <!-- Tareas en progreso -->
+                            <!-- =====================================
+                                 TAREAS EN PROGRESO
+                                 ===================================== -->
                             <div class="col-12 col-sm-6 col-xl-3">
 
                                 <div class="card h-100">
 
                                     <div class="card-body">
 
+                                        <!-- Número -->
                                         <p class="display-6 fw-bold mb-1">
                                             5
                                         </p>
 
+                                        <!-- Descripción -->
                                         <p class="card-text">
                                             En progreso
                                         </p>
@@ -237,17 +311,21 @@
                             </div>
 
 
-                            <!-- Tareas completadas -->
+                            <!-- =====================================
+                                 TAREAS COMPLETADAS
+                                 ===================================== -->
                             <div class="col-12 col-sm-6 col-xl-3">
 
                                 <div class="card h-100">
 
                                     <div class="card-body">
 
+                                        <!-- Número -->
                                         <p class="display-6 fw-bold mb-1">
                                             24
                                         </p>
 
+                                        <!-- Descripción -->
                                         <p class="card-text">
                                             Completadas
                                         </p>
@@ -259,17 +337,21 @@
                             </div>
 
 
-                            <!-- Tareas vencidas -->
+                            <!-- =====================================
+                                 TAREAS VENCIDAS
+                                 ===================================== -->
                             <div class="col-12 col-sm-6 col-xl-3">
 
                                 <div class="card h-100">
 
                                     <div class="card-body">
 
+                                        <!-- Número -->
                                         <p class="display-6 fw-bold mb-1">
                                             2
                                         </p>
 
+                                        <!-- Descripción -->
                                         <p class="card-text">
                                             Vencidas
                                         </p>
@@ -280,6 +362,7 @@
 
                             </div>
 
+
                         </div>
 
                     </section>
@@ -288,18 +371,32 @@
                     <!-- =============================================
                          SECCIÓN MIS TAREAS
                          ============================================= -->
-                    <section class="mt-5" aria-labelledby="tasks-title">
+                    <section
+                        class="mt-5"
+                        aria-labelledby="tasks-title"
+                    >
 
-                        <!-- Encabezado de la sección -->
-                        <header class="d-flex justify-content-between align-items-center mb-3">
+
+                        <!-- =========================================
+                             ENCABEZADO DE MIS TAREAS
+                             ========================================= -->
+                        <header
+                            class="d-flex justify-content-between align-items-center mb-3"
+                        >
 
                             <!-- Título -->
-                            <h2 id="tasks-title" class="h4 mb-0">
+                            <h2
+                                id="tasks-title"
+                                class="h4 mb-0"
+                            >
                                 Mis tareas
                             </h2>
 
-                            <!-- Enlace para ver todas las tareas -->
-                            <a href="#" class="text-decoration-none">
+                            <!-- Ver todas -->
+                            <a
+                                href="#"
+                                class="text-decoration-none"
+                            >
                                 Ver todas →
                             </a>
 
@@ -307,18 +404,28 @@
 
 
                         <!-- =========================================
-     PRIMERA TAREA
-     ========================================= -->
+                             TAREA 1
+                             ========================================= -->
                         <article class="card">
 
                             <div class="card-body">
 
+
                                 <!-- Tarea principal -->
                                 <div class="form-check">
 
-                                    <input class="form-check-input" type="checkbox" id="task-1">
+                                    <!-- Checkbox -->
+                                    <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        id="task-1"
+                                    >
 
-                                    <label class="form-check-label" for="task-1">
+                                    <!-- Nombre de la tarea -->
+                                    <label
+                                        class="form-check-label"
+                                        for="task-1"
+                                    >
                                         Diseñar interfaz de usuario
                                     </label>
 
@@ -326,9 +433,11 @@
 
 
                                 <!-- Información secundaria -->
-                                <div class="d-flex justify-content-between align-items-center mt-2">
+                                <div
+                                    class="d-flex justify-content-between align-items-center mt-2"
+                                >
 
-                                    <!-- Información de la tarea -->
+                                    <!-- Información -->
                                     <div class="d-flex gap-2">
 
                                         <!-- Proyecto -->
@@ -360,7 +469,210 @@
 
                         </article>
 
+
+                        <!-- =========================================
+                             TAREA 2
+                             ========================================= -->
+                        <article class="card mt-3">
+
+                            <div class="card-body">
+
+
+                                <!-- Tarea principal -->
+                                <div class="form-check">
+
+                                    <!-- Checkbox -->
+                                    <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        id="task-2"
+                                    >
+
+                                    <!-- Nombre de la tarea -->
+                                    <label
+                                        class="form-check-label"
+                                        for="task-2"
+                                    >
+                                        Crear estructura HTML
+                                    </label>
+
+                                </div>
+
+
+                                <!-- Información secundaria -->
+                                <div
+                                    class="d-flex justify-content-between align-items-center mt-2"
+                                >
+
+                                    <!-- Información -->
+                                    <div class="d-flex gap-2">
+
+                                        <!-- Proyecto -->
+                                        <span class="badge">
+                                            Universidad
+                                        </span>
+
+                                        <!-- Prioridad -->
+                                        <span class="badge">
+                                            Media
+                                        </span>
+
+                                        <!-- Fecha -->
+                                        <span>
+                                            Mañana
+                                        </span>
+
+                                    </div>
+
+
+                                    <!-- Estado -->
+                                    <span class="badge">
+                                        Pendiente
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- =========================================
+                             TAREA 3
+                             ========================================= -->
+                        <article class="card mt-3">
+
+                            <div class="card-body">
+
+
+                                <!-- Tarea principal -->
+                                <div class="form-check">
+
+                                    <!-- Checkbox -->
+                                    <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        id="task-3"
+                                    >
+
+                                    <!-- Nombre de la tarea -->
+                                    <label
+                                        class="form-check-label"
+                                        for="task-3"
+                                    >
+                                        Revisar documentación del proyecto
+                                    </label>
+
+                                </div>
+
+
+                                <!-- Información secundaria -->
+                                <div
+                                    class="d-flex justify-content-between align-items-center mt-2"
+                                >
+
+                                    <!-- Información -->
+                                    <div class="d-flex gap-2">
+
+                                        <!-- Proyecto -->
+                                        <span class="badge">
+                                            Trabajo
+                                        </span>
+
+                                        <!-- Prioridad -->
+                                        <span class="badge">
+                                            Baja
+                                        </span>
+
+                                        <!-- Fecha -->
+                                        <span>
+                                            Viernes
+                                        </span>
+
+                                    </div>
+
+
+                                    <!-- Estado -->
+                                    <span class="badge">
+                                        Pendiente
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- =========================================
+                             TAREA 4
+                             ========================================= -->
+                        <article class="card mt-3">
+
+                            <div class="card-body">
+
+
+                                <!-- Tarea principal -->
+                                <div class="form-check">
+
+                                    <!-- Checkbox -->
+                                    <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        id="task-4"
+                                    >
+
+                                    <!-- Nombre de la tarea -->
+                                    <label
+                                        class="form-check-label"
+                                        for="task-4"
+                                    >
+                                        Preparar presentación final
+                                    </label>
+
+                                </div>
+
+
+                                <!-- Información secundaria -->
+                                <div
+                                    class="d-flex justify-content-between align-items-center mt-2"
+                                >
+
+                                    <!-- Información -->
+                                    <div class="d-flex gap-2">
+
+                                        <!-- Proyecto -->
+                                        <span class="badge">
+                                            Universidad
+                                        </span>
+
+                                        <!-- Prioridad -->
+                                        <span class="badge">
+                                            Alta
+                                        </span>
+
+                                        <!-- Fecha -->
+                                        <span>
+                                            20 Ago
+                                        </span>
+
+                                    </div>
+
+
+                                    <!-- Estado -->
+                                    <span class="badge">
+                                        En progreso
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
                     </section>
+
 
                 </section>
 
@@ -371,8 +683,12 @@
     </main>
 
 
-    <!-- Bootstrap JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- =========================================================
+         BOOTSTRAP JAVASCRIPT
+         ========================================================= -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    ></script>
 
 </body>
 
