@@ -124,3 +124,36 @@ body {
     }
 
 }
+
+/* =========================================================
+   AVATAR
+   ========================================================= */
+
+.fluxa-avatar {
+
+    /* Ancho del avatar */
+    width: 38px;
+
+    /* Alto del avatar */
+    height: 38px;
+
+    /* Convertimos el elemento en un círculo */
+    border-radius: 50%;
+
+    /* Color de fondo */
+    background-color: var(--fluxa-primary);
+
+    /* Color de la letra */
+    color: #ffffff;
+
+    /* Centramos la inicial */
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    /* Peso de la letra */
+    font-weight: 600;
+
+}
