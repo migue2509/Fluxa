@@ -15,39 +15,65 @@
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- =========================================================
+     BOOTSTRAP ICONS
+     ========================================================= -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
     <!-- CSS personalizado de Fluxa -->
     <link rel="stylesheet" href="./assets/css/style.css">
+
+
 
 </head>
 
 <body>
 
     <!-- =========================================================
-         HEADER PRINCIPAL
-         ========================================================= -->
+     HEADER PRINCIPAL
+     ========================================================= -->
     <header class="border-bottom fluxa-header">
 
         <div class="container-fluid">
 
             <div class="d-flex align-items-center justify-content-between">
 
-                <!-- Logo -->
+                <!-- =================================================
+                 LOGO
+                 ================================================= -->
                 <a href="#" class="text-decoration-none">
-                    <img src="./assets/img/Fluxa-logo.png" alt="Fluxa - Gestión de tareas" class="fluxa-logo">
+
+                    <img src="assets/img/fluxa-logo.svg" alt="Fluxa - Gestión de tareas" class="fluxa-logo">
+
                 </a>
 
-                <!-- =========================================================
-     ACCIONES DEL HEADER
-     ========================================================= -->
+
+                <!-- =================================================
+                 ACCIONES DEL HEADER
+                 ================================================= -->
                 <div class="d-flex align-items-center gap-3">
 
-                    <!-- Botón de notificaciones -->
-                    <button type="button" class="btn btn-light" aria-label="Ver notificaciones">
-                        🔔
-                    </button>
+                    <!-- Notificaciones -->
+                    <div class="position-relative">
+
+                        <button type="button" class="btn btn-light fluxa-notification-button"
+                            aria-label="Ver notificaciones">
+
+                            <i class="bi bi-bell"></i>
+
+                        </button>
 
 
-                    <!-- Información del usuario -->
+                        <!-- Indicador -->
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                            aria-label="Tienes nuevas notificaciones">
+                            3
+                        </span>
+
+                    </div>
+
+
+                    <!-- Usuario -->
                     <div class="d-flex align-items-center gap-2">
 
                         <!-- Avatar -->

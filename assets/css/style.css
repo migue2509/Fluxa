@@ -157,3 +157,39 @@ body {
     font-weight: 600;
 
 }
+
+/* =========================================================
+   BOTÓN DE NOTIFICACIONES
+   ========================================================= */
+
+.fluxa-notification-button {
+
+    border: none;
+
+    background-color: transparent;
+
+    width: 40px;
+
+    height: 40px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: var(--fluxa-text-muted);
+
+}
+
+
+/* Estado hover */
+.fluxa-notification-button:hover {
+
+    background-color: var(--fluxa-background);
+
+    color: var(--fluxa-primary);
+
+}
