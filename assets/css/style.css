@@ -385,3 +385,352 @@ body {
     color: var(--fluxa-primary);
 
 }
+
+/* =========================================================
+   DASHBOARD
+   ========================================================= */
+
+.fluxa-dashboard {
+
+    /* Espacio interno del contenido */
+    padding-top: 2rem;
+
+    padding-bottom: 2rem;
+
+}
+
+
+/* =========================================================
+   ENCABEZADO DEL DASHBOARD
+   ========================================================= */
+
+.fluxa-dashboard-header {
+
+    /* Separación respecto al resumen */
+    margin-bottom: 2rem;
+
+}
+
+
+/* =========================================================
+   RESUMEN DE TAREAS
+   ========================================================= */
+
+.fluxa-task-summary {
+
+    /* Espacio inferior antes de las tareas */
+    margin-bottom: 2rem;
+
+}
+
+
+/* =========================================================
+   CARDS DE RESUMEN
+   ========================================================= */
+
+.fluxa-summary-card {
+
+    /* Eliminamos el borde de Bootstrap */
+    border: none;
+
+    /* Bordes redondeados */
+    border-radius: 14px;
+
+}
+
+
+/* Iconos de resumen */
+
+.fluxa-summary-icon {
+
+    /* Tamaño */
+    width: 40px;
+
+    height: 40px;
+
+    /* Forma circular */
+    border-radius: 50%;
+
+    /* Centrado */
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+/* Icono - pendientes */
+
+.fluxa-summary-icon-warning {
+
+    background-color: #fff3cd;
+
+    color: #856404;
+
+}
+
+
+/* Icono - progreso */
+
+.fluxa-summary-icon-primary {
+
+    background-color: #e7e5ff;
+
+    color: var(--fluxa-primary);
+
+}
+
+
+/* Icono - completadas */
+
+.fluxa-summary-icon-success {
+
+    background-color: #d1e7dd;
+
+    color: #0f5132;
+
+}
+
+
+/* =========================================================
+   SECCIÓN DE TAREAS
+   ========================================================= */
+
+.fluxa-tasks-section {
+
+    width: 100%;
+
+}
+
+
+/* =========================================================
+   BOTÓN "VER TODAS"
+   ========================================================= */
+
+.fluxa-view-all-button {
+
+    border: none;
+
+    border-radius: 8px;
+
+}
+
+
+/* =========================================================
+   CARD DE LA LISTA DE TAREAS
+   ========================================================= */
+
+.fluxa-task-list-card {
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+}
+
+
+/* =========================================================
+   ELEMENTO INDIVIDUAL DE TAREA
+   ========================================================= */
+
+.fluxa-task-item {
+
+    /* Espacio interno */
+    padding: 1.25rem;
+
+    /* Eliminamos bordes laterales */
+    border-left: none;
+
+    border-right: none;
+
+}
+
+
+/* Primera tarea */
+
+.fluxa-task-item:first-child {
+
+    border-top: none;
+
+}
+
+
+/* Última tarea */
+
+.fluxa-task-item:last-child {
+
+    border-bottom: none;
+
+}
+
+
+/* =========================================================
+   TÍTULO DE LA TAREA
+   ========================================================= */
+
+.fluxa-task-title {
+
+    /* Peso */
+    font-weight: 600;
+
+    /* Cursor */
+    cursor: pointer;
+
+    /* Color */
+    color: var(--fluxa-text);
+
+}
+
+
+/* =========================================================
+   CHECKBOX
+   ========================================================= */
+
+.fluxa-task-item .form-check-input {
+
+    width: 1.15rem;
+
+    height: 1.15rem;
+
+    cursor: pointer;
+
+}
+
+
+/* =========================================================
+   PRIORIDAD
+   ========================================================= */
+
+.fluxa-priority-badge {
+
+    /* Sin fondo fuerte */
+    background-color: transparent;
+
+    /* Color */
+    color: var(--fluxa-text-muted);
+
+    /* Tamaño */
+    font-size: 1rem;
+
+}
+
+
+/* =========================================================
+   CARD DE PROGRESO
+   ========================================================= */
+
+.fluxa-progress-card {
+
+    border-radius: 14px;
+
+}
+
+
+/* =========================================================
+   BARRA DE PROGRESO
+   ========================================================= */
+
+.fluxa-progress-card .progress {
+
+    /* Altura */
+    height: 8px;
+
+    /* Bordes */
+    border-radius: 999px;
+
+}
+
+
+/* =========================================================
+   PRÓXIMAS TAREAS
+   ========================================================= */
+
+.fluxa-upcoming-card {
+
+    border-radius: 14px;
+
+}
+
+
+/* Elemento de próxima tarea */
+
+.fluxa-upcoming-item {
+
+    /* Espaciado */
+    padding: 0.75rem 0;
+
+    /* Línea divisoria */
+    border-bottom: 1px solid var(--fluxa-border);
+
+}
+
+
+/* Eliminamos la línea del último elemento */
+
+.fluxa-upcoming-item:last-child {
+
+    border-bottom: none;
+
+    padding-bottom: 0;
+
+}
+
+
+/* Primer elemento */
+
+.fluxa-upcoming-item:first-child {
+
+    padding-top: 0;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .fluxa-dashboard {
+
+        padding-top: 1.5rem;
+
+    }
+
+}
+
+
+@media (max-width: 575.98px) {
+
+    .fluxa-dashboard {
+
+        padding-top: 1rem;
+
+        padding-bottom: 1rem;
+
+    }
+
+
+    .fluxa-dashboard-header {
+
+        margin-bottom: 1.5rem;
+
+    }
+
+
+    .fluxa-dashboard-header h1 {
+
+        font-size: 1.75rem;
+
+    }
+
+
+    .fluxa-task-item {
+
+        padding: 1rem;
+
+    }
+
+}

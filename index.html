@@ -290,61 +290,76 @@
 
                 </aside>
 
-
-                <!-- =================================================
-                     DASHBOARD
-                     ================================================= -->
+                <!-- =========================================================
+     DASHBOARD
+     ========================================================= -->
                 <section class="col-12 col-lg-9 fluxa-dashboard">
 
-                    <!-- =============================================
-                         SALUDO
-                         ============================================= -->
-                    <header class="mb-4">
+                    <!-- =====================================================
+         ENCABEZADO DEL DASHBOARD
+         ===================================================== -->
+                    <header class="fluxa-dashboard-header">
 
-                        <h1>
+                        <!-- Saludo principal -->
+                        <h1 class="display-6 fw-bold mb-2">
                             Buenos días, Miguel 👋
                         </h1>
 
-                        <p>
-                            Aquí tienes un resumen de tus tareas de hoy.
+                        <!-- Descripción -->
+                        <p class="text-muted mb-0">
+                            Aquí tienes un resumen de tus tareas.
                         </p>
 
                     </header>
 
 
-                    <!-- =============================================
-                         ESTADÍSTICAS
-                         ============================================= -->
-                    <section aria-labelledby="statistics-title">
+                    <!-- =====================================================
+         RESUMEN DE TAREAS
+         ===================================================== -->
+                    <section class="fluxa-task-summary" aria-labelledby="task-summary-title">
 
-                        <!--
-                            Título oculto visualmente.
-                            Mantiene una estructura accesible.
-                        -->
-                        <h2 id="statistics-title" class="visually-hidden">
-                            Estadísticas de tareas
+                        <!-- Título accesible -->
+                        <h2 id="task-summary-title" class="visually-hidden">
+                            Resumen de tareas
                         </h2>
 
 
-                        <!-- Grid de estadísticas -->
+                        <!-- Grid de resumen -->
                         <div class="row g-3">
 
 
-                            <!-- =====================================
-                                 PENDIENTES
-                                 ===================================== -->
-                            <div class="col-12 col-sm-6 col-xl-3">
+                            <!-- =================================================
+                 CARD: TAREAS PENDIENTES
+                 ================================================= -->
+                            <div class="col-12 col-md-4">
 
-                                <article class="card h-100">
+                                <article class="card fluxa-summary-card h-100 shadow-sm">
 
                                     <div class="card-body">
 
+                                        <!-- Encabezado de la card -->
+                                        <div class="d-flex align-items-center justify-content-between mb-3">
+
+                                            <span class="text-muted">
+                                                Pendientes
+                                            </span>
+
+                                            <span class="fluxa-summary-icon fluxa-summary-icon-warning">
+                                                <i class="bi bi-clock"></i>
+                                            </span>
+
+                                        </div>
+
+
+                                        <!-- Cantidad -->
                                         <p class="display-6 fw-bold mb-1">
                                             12
                                         </p>
 
-                                        <p class="card-text">
-                                            Tareas pendientes
+
+                                        <!-- Descripción -->
+                                        <p class="text-muted mb-0">
+                                            tareas pendientes
                                         </p>
 
                                     </div>
@@ -354,21 +369,38 @@
                             </div>
 
 
-                            <!-- =====================================
-                                 EN PROGRESO
-                                 ===================================== -->
-                            <div class="col-12 col-sm-6 col-xl-3">
+                            <!-- =================================================
+                 CARD: TAREAS EN PROGRESO
+                 ================================================= -->
+                            <div class="col-12 col-md-4">
 
-                                <article class="card h-100">
+                                <article class="card fluxa-summary-card h-100 shadow-sm">
 
                                     <div class="card-body">
 
+                                        <!-- Encabezado -->
+                                        <div class="d-flex align-items-center justify-content-between mb-3">
+
+                                            <span class="text-muted">
+                                                En progreso
+                                            </span>
+
+                                            <span class="fluxa-summary-icon fluxa-summary-icon-primary">
+                                                <i class="bi bi-arrow-repeat"></i>
+                                            </span>
+
+                                        </div>
+
+
+                                        <!-- Cantidad -->
                                         <p class="display-6 fw-bold mb-1">
-                                            5
+                                            4
                                         </p>
 
-                                        <p class="card-text">
-                                            En progreso
+
+                                        <!-- Descripción -->
+                                        <p class="text-muted mb-0">
+                                            tareas en progreso
                                         </p>
 
                                     </div>
@@ -378,21 +410,38 @@
                             </div>
 
 
-                            <!-- =====================================
-                                 COMPLETADAS
-                                 ===================================== -->
-                            <div class="col-12 col-sm-6 col-xl-3">
+                            <!-- =================================================
+                 CARD: TAREAS COMPLETADAS
+                 ================================================= -->
+                            <div class="col-12 col-md-4">
 
-                                <article class="card h-100">
+                                <article class="card fluxa-summary-card h-100 shadow-sm">
 
                                     <div class="card-body">
 
+                                        <!-- Encabezado -->
+                                        <div class="d-flex align-items-center justify-content-between mb-3">
+
+                                            <span class="text-muted">
+                                                Completadas
+                                            </span>
+
+                                            <span class="fluxa-summary-icon fluxa-summary-icon-success">
+                                                <i class="bi bi-check2-circle"></i>
+                                            </span>
+
+                                        </div>
+
+
+                                        <!-- Cantidad -->
                                         <p class="display-6 fw-bold mb-1">
-                                            24
+                                            8
                                         </p>
 
-                                        <p class="card-text">
-                                            Completadas
+
+                                        <!-- Descripción -->
+                                        <p class="text-muted mb-0">
+                                            tareas completadas
                                         </p>
 
                                     </div>
@@ -401,263 +450,410 @@
 
                             </div>
 
-
-                            <!-- =====================================
-                                 VENCIDAS
-                                 ===================================== -->
-                            <div class="col-12 col-sm-6 col-xl-3">
-
-                                <article class="card h-100">
-
-                                    <div class="card-body">
-
-                                        <p class="display-6 fw-bold mb-1">
-                                            2
-                                        </p>
-
-                                        <p class="card-text">
-                                            Vencidas
-                                        </p>
-
-                                    </div>
-
-                                </article>
-
-                            </div>
 
                         </div>
 
                     </section>
 
 
-                    <!-- =============================================
-                         MIS TAREAS
-                         ============================================= -->
-                    <section class="mt-5" aria-labelledby="tasks-title">
-
-                        <!-- Encabezado -->
-                        <header class="d-flex justify-content-between align-items-center mb-3">
-
-                            <h2 id="tasks-title" class="h4 mb-0">
-                                Mis tareas
-                            </h2>
+                    <!-- =====================================================
+         CONTENIDO INFERIOR DEL DASHBOARD
+         ===================================================== -->
+                    <div class="row g-4 mt-1">
 
 
-                            <a href="#" class="text-decoration-none">
-                                Ver todas →
-                            </a>
+                        <!-- =================================================
+             SECCIÓN DE TAREAS
+             ================================================= -->
+                        <div class="col-12 col-xl-8">
 
-                        </header>
+                            <section class="fluxa-tasks-section" aria-labelledby="tasks-title">
+
+                                <!-- =============================================
+                     ENCABEZADO DE TAREAS
+                     ============================================= -->
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+
+                                    <div>
+
+                                        <h2 id="tasks-title" class="h4 fw-bold mb-1">
+                                            Mis tareas
+                                        </h2>
+
+                                        <p class="text-muted mb-0">
+                                            Organiza y revisa tus tareas pendientes.
+                                        </p>
+
+                                    </div>
 
 
-                        <!-- =========================================
-                             TAREA 1
-                             ========================================= -->
-                        <article class="card">
-
-                            <div class="card-body">
-
-                                <!-- Título de la tarea -->
-                                <div class="form-check">
-
-                                    <input class="form-check-input" type="checkbox" id="task-1">
-
-                                    <label class="form-check-label" for="task-1">
-                                        Diseñar interfaz de usuario
-                                    </label>
+                                    <!-- Ver todas -->
+                                    <a href="#" class="btn btn-sm btn-light fluxa-view-all-button">
+                                        Ver todas
+                                    </a>
 
                                 </div>
 
 
-                                <!-- Información de la tarea -->
-                                <div class="d-flex justify-content-between align-items-center mt-2">
+                                <!-- =============================================
+                     FILTROS DE TAREAS
+                     ============================================= -->
+                                <div class="btn-group mb-3" role="group" aria-label="Filtrar tareas">
 
-                                    <!-- Datos -->
-                                    <div class="d-flex gap-2">
+                                    <button type="button" class="btn btn-sm btn-primary">
+                                        Todas
+                                    </button>
 
-                                        <span class="badge">
-                                            Trabajo
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">
+                                        Pendientes
+                                    </button>
+
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">
+                                        Completadas
+                                    </button>
+
+                                </div>
+
+
+                                <!-- =============================================
+                     LISTA DE TAREAS
+                     ============================================= -->
+                                <div class="card border-0 shadow-sm fluxa-task-list-card">
+
+                                    <div class="card-body p-0">
+
+                                        <ul class="list-group list-group-flush">
+
+
+                                            <!-- =================================
+                                 TAREA 1
+                                 ================================= -->
+                                            <li class="list-group-item fluxa-task-item">
+
+                                                <div class="d-flex align-items-start gap-3">
+
+
+                                                    <!-- Checkbox -->
+                                                    <div class="form-check pt-1">
+
+                                                        <input class="form-check-input" type="checkbox" id="task-1">
+
+                                                    </div>
+
+
+                                                    <!-- Información -->
+                                                    <div class="flex-grow-1">
+
+                                                        <label for="task-1" class="fluxa-task-title">
+                                                            Diseñar interfaz del Dashboard
+                                                        </label>
+
+                                                        <p class="text-muted small mb-2">
+                                                            Crear la estructura principal de la página.
+                                                        </p>
+
+
+                                                        <!-- Metadata -->
+                                                        <div class="d-flex flex-wrap align-items-center gap-2">
+
+                                                            <span class="badge text-bg-primary">
+                                                                Trabajo
+                                                            </span>
+
+                                                            <span class="text-muted small">
+                                                                <i class="bi bi-calendar3"></i>
+                                                                Hoy
+                                                            </span>
+
+                                                        </div>
+
+                                                    </div>
+
+
+                                                    <!-- Prioridad -->
+                                                    <span class="badge fluxa-priority-badge" title="Prioridad alta">
+                                                        <i class="bi bi-star-fill"></i>
+                                                    </span>
+
+
+                                                </div>
+
+                                            </li>
+
+
+                                            <!-- =================================
+                                 TAREA 2
+                                 ================================= -->
+                                            <li class="list-group-item fluxa-task-item">
+
+                                                <div class="d-flex align-items-start gap-3">
+
+
+                                                    <!-- Checkbox -->
+                                                    <div class="form-check pt-1">
+
+                                                        <input class="form-check-input" type="checkbox" id="task-2">
+
+                                                    </div>
+
+
+                                                    <!-- Información -->
+                                                    <div class="flex-grow-1">
+
+                                                        <label for="task-2" class="fluxa-task-title">
+                                                            Revisar documentación de Bootstrap
+                                                        </label>
+
+                                                        <p class="text-muted small mb-2">
+                                                            Revisar componentes y utilidades utilizadas.
+                                                        </p>
+
+
+                                                        <div class="d-flex flex-wrap align-items-center gap-2">
+
+                                                            <span class="badge text-bg-secondary">
+                                                                Universidad
+                                                            </span>
+
+                                                            <span class="text-muted small">
+                                                                <i class="bi bi-calendar3"></i>
+                                                                Mañana
+                                                            </span>
+
+                                                        </div>
+
+                                                    </div>
+
+
+                                                    <!-- Prioridad -->
+                                                    <span class="badge fluxa-priority-badge" title="Prioridad normal">
+                                                        <i class="bi bi-star"></i>
+                                                    </span>
+
+
+                                                </div>
+
+                                            </li>
+
+
+                                            <!-- =================================
+                                 TAREA 3
+                                 ================================= -->
+                                            <li class="list-group-item fluxa-task-item">
+
+                                                <div class="d-flex align-items-start gap-3">
+
+
+                                                    <!-- Checkbox -->
+                                                    <div class="form-check pt-1">
+
+                                                        <input class="form-check-input" type="checkbox" id="task-3">
+
+                                                    </div>
+
+
+                                                    <!-- Información -->
+                                                    <div class="flex-grow-1">
+
+                                                        <label for="task-3" class="fluxa-task-title">
+                                                            Preparar presentación del proyecto
+                                                        </label>
+
+                                                        <p class="text-muted small mb-2">
+                                                            Organizar las diapositivas para la presentación.
+                                                        </p>
+
+
+                                                        <div class="d-flex flex-wrap align-items-center gap-2">
+
+                                                            <span class="badge text-bg-success">
+                                                                Personal
+                                                            </span>
+
+                                                            <span class="text-muted small">
+                                                                <i class="bi bi-calendar3"></i>
+                                                                Viernes
+                                                            </span>
+
+                                                        </div>
+
+                                                    </div>
+
+
+                                                    <!-- Prioridad -->
+                                                    <span class="badge fluxa-priority-badge" title="Prioridad normal">
+                                                        <i class="bi bi-star"></i>
+                                                    </span>
+
+
+                                                </div>
+
+                                            </li>
+
+
+                                        </ul>
+
+                                    </div>
+
+                                </div>
+
+                            </section>
+
+                        </div>
+
+
+                        <!-- =================================================
+             COLUMNA DERECHA
+             ================================================= -->
+                        <div class="col-12 col-xl-4">
+
+
+                            <!-- ===============================================
+                 PROGRESO
+                 =============================================== -->
+                            <section class="card border-0 shadow-sm fluxa-progress-card"
+                                aria-labelledby="progress-title">
+
+                                <div class="card-body">
+
+
+                                    <!-- Encabezado -->
+                                    <div class="d-flex align-items-center justify-content-between mb-3">
+
+                                        <h2 id="progress-title" class="h5 fw-bold mb-0">
+                                            Progreso
+                                        </h2>
+
+                                        <i class="bi bi-bar-chart-line text-muted"></i>
+
+                                    </div>
+
+
+                                    <!-- Porcentaje -->
+                                    <div class="d-flex align-items-end gap-2 mb-2">
+
+                                        <span class="display-6 fw-bold">
+                                            67%
                                         </span>
 
-                                        <span class="badge">
-                                            Alta
-                                        </span>
-
-                                        <span>
-                                            Hoy
+                                        <span class="text-muted mb-2">
+                                            completado
                                         </span>
 
                                     </div>
 
 
-                                    <!-- Estado -->
-                                    <span class="badge">
-                                        En progreso
-                                    </span>
+                                    <!-- Barra de progreso -->
+                                    <div class="progress mb-3" role="progressbar" aria-label="Progreso de tareas"
+                                        aria-valuenow="67" aria-valuemin="0" aria-valuemax="100">
 
-                                </div>
-
-                            </div>
-
-                        </article>
-
-
-                        <!-- =========================================
-                             TAREA 2
-                             ========================================= -->
-                        <article class="card mt-3">
-
-                            <div class="card-body">
-
-                                <!-- Título de la tarea -->
-                                <div class="form-check">
-
-                                    <input class="form-check-input" type="checkbox" id="task-2">
-
-                                    <label class="form-check-label" for="task-2">
-                                        Crear estructura HTML
-                                    </label>
-
-                                </div>
-
-
-                                <!-- Información de la tarea -->
-                                <div class="d-flex justify-content-between align-items-center mt-2">
-
-                                    <!-- Datos -->
-                                    <div class="d-flex gap-2">
-
-                                        <span class="badge">
-                                            Universidad
-                                        </span>
-
-                                        <span class="badge">
-                                            Media
-                                        </span>
-
-                                        <span>
-                                            Mañana
-                                        </span>
+                                        <div class="progress-bar" style="width: 67%"></div>
 
                                     </div>
 
 
-                                    <!-- Estado -->
-                                    <span class="badge">
-                                        Pendiente
-                                    </span>
+                                    <p class="text-muted small mb-0">
+                                        Has completado 8 de 12 tareas.
+                                    </p>
 
                                 </div>
 
-                            </div>
-
-                        </article>
+                            </section>
 
 
-                        <!-- =========================================
-                             TAREA 3
-                             ========================================= -->
-                        <article class="card mt-3">
+                            <!-- ===============================================
+                 PRÓXIMAS TAREAS
+                 =============================================== -->
+                            <section class="card border-0 shadow-sm fluxa-upcoming-card mt-4"
+                                aria-labelledby="upcoming-title">
 
-                            <div class="card-body">
-
-                                <!-- Título de la tarea -->
-                                <div class="form-check">
-
-                                    <input class="form-check-input" type="checkbox" id="task-3">
-
-                                    <label class="form-check-label" for="task-3">
-                                        Revisar documentación del proyecto
-                                    </label>
-
-                                </div>
+                                <div class="card-body">
 
 
-                                <!-- Información de la tarea -->
-                                <div class="d-flex justify-content-between align-items-center mt-2">
+                                    <!-- Encabezado -->
+                                    <div class="d-flex align-items-center justify-content-between mb-3">
 
-                                    <!-- Datos -->
-                                    <div class="d-flex gap-2">
+                                        <h2 id="upcoming-title" class="h5 fw-bold mb-0">
+                                            Próximas tareas
+                                        </h2>
 
-                                        <span class="badge">
-                                            Trabajo
-                                        </span>
-
-                                        <span class="badge">
-                                            Baja
-                                        </span>
-
-                                        <span>
-                                            Viernes
-                                        </span>
+                                        <i class="bi bi-calendar3 text-muted"></i>
 
                                     </div>
 
 
-                                    <!-- Estado -->
-                                    <span class="badge">
-                                        Pendiente
-                                    </span>
+                                    <!-- Lista -->
+                                    <ul class="list-unstyled mb-0">
+
+
+                                        <!-- Próxima tarea 1 -->
+                                        <li class="fluxa-upcoming-item">
+
+                                            <div>
+
+                                                <p class="fw-semibold mb-1">
+                                                    Revisar documentación
+                                                </p>
+
+                                                <span class="text-muted small">
+                                                    Mañana
+                                                </span>
+
+                                            </div>
+
+                                        </li>
+
+
+                                        <!-- Próxima tarea 2 -->
+                                        <li class="fluxa-upcoming-item">
+
+                                            <div>
+
+                                                <p class="fw-semibold mb-1">
+                                                    Reunión del proyecto
+                                                </p>
+
+                                                <span class="text-muted small">
+                                                    Miércoles
+                                                </span>
+
+                                            </div>
+
+                                        </li>
+
+
+                                        <!-- Próxima tarea 3 -->
+                                        <li class="fluxa-upcoming-item">
+
+                                            <div>
+
+                                                <p class="fw-semibold mb-1">
+                                                    Entregar proyecto
+                                                </p>
+
+                                                <span class="text-muted small">
+                                                    Viernes
+                                                </span>
+
+                                            </div>
+
+                                        </li>
+
+
+                                    </ul>
 
                                 </div>
 
-                            </div>
-
-                        </article>
+                            </section>
 
 
-                        <!-- =========================================
-                             TAREA 4
-                             ========================================= -->
-                        <article class="card mt-3">
-
-                            <div class="card-body">
-
-                                <!-- Título de la tarea -->
-                                <div class="form-check">
-
-                                    <input class="form-check-input" type="checkbox" id="task-4">
-
-                                    <label class="form-check-label" for="task-4">
-                                        Preparar presentación final
-                                    </label>
-
-                                </div>
+                        </div>
 
 
-                                <!-- Información de la tarea -->
-                                <div class="d-flex justify-content-between align-items-center mt-2">
+                    </div>
 
-                                    <!-- Datos -->
-                                    <div class="d-flex gap-2">
+                </section>
 
-                                        <span class="badge">
-                                            Universidad
-                                        </span>
-
-                                        <span class="badge">
-                                            Alta
-                                        </span>
-
-                                        <span>
-                                            20 Ago
-                                        </span>
-
-                                    </div>
-
-
-                                    <!-- Estado -->
-                                    <span class="badge">
-                                        En progreso
-                                    </span>
-
-                                </div>
-
-                            </div>
-
-                        </article>
-
-                    </section>
 
                 </section>
 
