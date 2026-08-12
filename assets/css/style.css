@@ -295,3 +295,93 @@ body {
     color: #ffffff;
 
 }
+
+/* =========================================================
+   BOTÓN AGREGAR PROYECTO
+   ========================================================= */
+
+.fluxa-add-project-button {
+
+    width: 32px;
+
+    height: 32px;
+
+    border-radius: 50%;
+
+    padding: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: var(--fluxa-text-muted);
+
+}
+
+
+.fluxa-add-project-button:hover {
+
+    background-color: var(--fluxa-background);
+
+    color: var(--fluxa-primary);
+
+}
+
+
+/* =========================================================
+   LISTA DE PROYECTOS
+   ========================================================= */
+
+.fluxa-project-list {
+
+    margin-bottom: 0;
+
+}
+
+
+/* Enlace del proyecto */
+.fluxa-project-link {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.75rem;
+
+    padding: 0.5rem 0.75rem;
+
+    text-decoration: none;
+
+    color: var(--fluxa-text-muted);
+
+    border-radius: 8px;
+
+}
+
+
+/* Punto del proyecto */
+.fluxa-project-dot {
+
+    width: 8px;
+
+    height: 8px;
+
+    border-radius: 50%;
+
+    background-color: var(--fluxa-primary);
+
+    flex-shrink: 0;
+
+}
+
+
+/* Hover */
+.fluxa-project-link:hover {
+
+    background-color: var(--fluxa-background);
+
+    color: var(--fluxa-primary);
+
+}
